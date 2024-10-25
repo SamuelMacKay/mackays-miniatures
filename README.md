@@ -178,3 +178,4 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 
 #### Icons
 - All page Icons - [Font Awesome](https://fontawesome.com/)
+- home page image - [Warhammer Artwork](https://www.goodfon.com/games/wallpaper-download-1920x1120-dark-imperium-warhammer-40-000-box-cover.html)
