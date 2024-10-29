@@ -71,6 +71,16 @@ body {
     background: #000 !important;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -80,18 +90,23 @@ body {
   }
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
+/* fixed top navbar */
 
-    .header-container {
-        padding-top: 164px;
+.fixed-top-desktop-only {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.header-container {
+    padding-top: 164px;
+    }
+/* end of code institute CSS*/
+
+@media (max-width: 425px) {
+    .nav-link {
+        padding: 0;
     }
 }
-/* end of code institute CSS*/
