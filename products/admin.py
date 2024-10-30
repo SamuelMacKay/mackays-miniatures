@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Product, Faction
-
+from .models import Product, Faction, UnitType
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
@@ -20,5 +19,11 @@ class FactionAdmin(admin.ModelAdmin):
         'name',
     )
 
+class UnitTypeAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+    )
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Faction, FactionAdmin)
+admin.site.register(UnitType, UnitTypeAdmin)

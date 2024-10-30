@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "products.unitType", "fields": {"name": "character"}}, {"pk": 2, "model": "products.unitType", "fields": {"name": "infantry"}}, {"pk": 3, "model": "products.unitType", "fields": {"name": "mounted"}}, {"pk": 4, "model": "products.unitType", "fields": {"name": "vehicle"}}, {"pk": 5, "model": "products.unitType", "fields": {"name": "monster"}}]
