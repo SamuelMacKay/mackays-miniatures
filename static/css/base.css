@@ -130,3 +130,7 @@ body {
 .text-darkgreen {
     color: darkgreen;
 }
+
+.text-capitalize {
+    text-transform: capitalize
+}
