@@ -11,8 +11,41 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     factions = None
+    pre_order = None
+    new_releases = None
+    specials = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+
+            if'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            products = products.order_by(sortkey)
+
+        if 'new_releases' in request.GET:
+            new_releases = request.GET['new_releases']
+            products = products.filter(is_new=True)
+
+        if 'pre_order' in request.GET:
+            pre_order = request.GET['pre_order']
+            products = products.filter(pre_order=True)
+        
+        if 'specials' in request.GET:
+            specials = request.GET['specials']
+            products = products.filter(
+                pre_order=True,
+                is_new=True
+            )
+
         if 'faction' in request.GET:
             factions = request.GET['faction'].split(',')
             products = products.filter(faction__name__in=factions)
@@ -29,10 +62,16 @@ def all_products(request):
                 queries = Q(name__icontains=query) | Q(setting__icontains=query)
                 products = products.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'products': products,
         'search_term': query,
-        'current_factions': factions
+        'current_factions': factions,
+        'pre_order': pre_order,
+        'new_releases': new_releases,
+        'specials': specials,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)

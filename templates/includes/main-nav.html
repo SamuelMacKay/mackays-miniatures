@@ -5,10 +5,10 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Faction</a>
-                <a href="" class="dropdown-item">By Unit Type</a>
-                <a href="" class="dropdown-item">By Game Setting</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=faction&direction=asc" class="dropdown-item">By Faction</a>
+                <a href="{% url 'products' %}?sort=unit_type&direction=asc" class="dropdown-item">By Unit Type</a>
+                <a href="{% url 'products' %}?sort=setting&direction=asc" class="dropdown-item">By Game Setting</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -44,8 +44,8 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?pre_order" class="dropdown-item">Pre-Order</a>
-                <a href="{% url 'products' %}?is_new" class="dropdown-item">New Releases</a>
-                <a href="{% url 'products' %}?" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?new_releases" class="dropdown-item">New Releases</a>
+                <a href="{% url 'products' %}?specials" class="dropdown-item">All Products</a>
             </div>
         </li>
 
