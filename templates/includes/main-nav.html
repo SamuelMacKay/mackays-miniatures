@@ -18,10 +18,10 @@
                 Warhammer 40,000
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="40k-link">
-                <a href="" class="dropdown-item">Space Marines</a>
-                <a href="" class="dropdown-item">Chaos</a>
-                <a href="" class="dropdown-item">Orks</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?faction=space_marines" class="dropdown-item">Space Marines</a>
+                <a href="{% url 'products' %}?faction=chaos" class="dropdown-item">Chaos</a>
+                <a href="{% url 'products' %}?faction=orks" class="dropdown-item">Orks</a>
+                <a href="{% url 'products' %}?faction=space_marines,chaos,orks" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -30,11 +30,11 @@
                 Age of Sigmar
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="aos-link">
-                <a href="" class="dropdown-item">Order</a>
-                <a href="" class="dropdown-item">Death</a>
-                <a href="" class="dropdown-item">Skaven</a>
-                <a href="" class="dropdown-item">Destruction</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?faction=order" class="dropdown-item">Order</a>
+                <a href="{% url 'products' %}?faction=death" class="dropdown-item">Death</a>
+                <a href="{% url 'products' %}?faction=skaven" class="dropdown-item">Skaven</a>
+                <a href="{% url 'products' %}?faction=destruction" class="dropdown-item">Destruction</a>
+                <a href="{% url 'products' %}?faction=order,death,skaven,destruction" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -43,9 +43,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Pre-Order</a>
-                <a href="" class="dropdown-item">New Releases</a>
-                <a href="" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?pre_order" class="dropdown-item">Pre-Order</a>
+                <a href="{% url 'products' %}?is_new" class="dropdown-item">New Releases</a>
+                <a href="{% url 'products' %}?" class="dropdown-item">All Products</a>
             </div>
         </li>
 
