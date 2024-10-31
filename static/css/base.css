@@ -99,11 +99,6 @@ a.faction-badge > span.badge:hover {
     color: #fff !important;
 }
 
-.reverse-hover:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
-
 .btt-button {
     height: 42px;
     width: 42px;
@@ -178,4 +173,19 @@ a.faction-badge > span.badge:hover {
     text-transform: capitalize
 }
 
+.btn-grey {
+    background: slategray;
+    color: white;
+}
 
+.input-group-width {
+    width: 110px;
+}
+.reverse-hover:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.buy-hover:hover {
+    background: darkgreen;
+}

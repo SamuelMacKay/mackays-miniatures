@@ -86,7 +86,28 @@
                                             </p>
                                             {% endif %}
                                             <p class="text-capitalize mb-0 font-size-small text-left"><strong>unit Type:</strong> {{ product.unit_type }}</p>
-                                                <p class="text-capitalize font-size-small text-left"><strong>setting:</strong> {{ product.setting }}</p>
+                                            <p class="text-capitalize font-size-small text-left"><strong>setting:</strong> {{ product.setting }}</p>
+                                            <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <div class="input-group input-group-width float-right">
+                                        <input class="form-control qty_input rounded-1" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                        <button type="submit" class="btn btn-black rounded-1 text-uppercase" value="">
+                                            <i class="fas fa-cart-plus fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+
                                             <hr>
                                         </div>
                                     </div>
