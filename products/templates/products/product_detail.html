@@ -32,7 +32,9 @@
                     <br>
                     <p class="lead text-left text-size-large text-darkgreen font-weight-bold">£{{ product.price }}
                         {% if product.is_new %}
-                            <span class="bg-yellow text-black float-right rounded-1 badge">NEW!</span>
+                            <a href="{% url 'products' %}?new_releases">
+                                <span class="bg-yellow text-black float-right rounded-1 badge">NEW!</span>
+                            </a>
                         {% endif %}
                         {% if product.pre_order %}
                             <span class="bg-gray text-white float-right rounded-1 badge">Pre Order Now</span>
@@ -45,7 +47,6 @@
                     {% endif %}
                     <p class="text-capitalize mb-0 font-size-small text-left"><strong>setting:</strong> {{ product.setting }}</p>
                     <p class="text-capitalize font-size-small text-left"><strong>unit Type:</strong> {{ product.unit_type }}</p>
-                    <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
@@ -59,17 +60,18 @@
                             </div>
 
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="{% if product.pre_order %}Pre Order{% else %}Add to Bag{% endif %}">
+                                <input type="submit" class="btn btn-black rounded-1 text-uppercase mt-5" value="{% if product.pre_order %}Pre Order{% else %}Add to Bag{% endif %}">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>                    
+                    </form>
+                    <p class="mt-3">{{ product.description }}</p>
                 </div>
             </div>
         </div>
