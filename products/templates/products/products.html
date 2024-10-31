@@ -15,12 +15,43 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2 class="logo-font">Products</h2>
+                {% for f in current_factions %}
+                    <a href="{% url 'products' %}?faction={{ f.name }}" class="faction-badge text-decoration-none">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-black">{{ f.friendly_name }}</span>
+                    </a>
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select name="" id="id-selector" class="custom-select custom-select-sm rounded-0 border border-{%if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort By...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (Low to High)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (High to Low)</option>
+                                <option value="faction_asc" {% if current_sorting == 'faction_asc' %}selected{% endif %}>Faction (A-Z)</option>
+                                <option value="faction_desc" {% if current_sorting == 'faction_desc' %}selected{% endif %}>Faction (Z-A)</option>
+                                <option value="unit_type_asc" {% if current_sorting == 'unit_type_asc' %}selected{% endif %}>Unit Type (A-Z)</option>
+                                <option value="unit_type_desc" {% if current_sorting == 'unit_type_desc' %}selected{% endif %}>Unit Type (Z-A)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="setting_asc" {% if current_sorting == 'setting_asc' %}selected{% endif %}>Setting (A-Z)</option>
+                                <option value="setting_desc" {% if current_sorting == 'setting_desc' %}selected{% endif %}>Setting (Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="text-muted mt-3 text-center text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                                <span class="small text-uppercase"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            {% endif %}
+                            {{ products|length }} Products{% if search_term %} found for <strong>{{ search_term }}</strong>{% endif %}
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col lg-4 col-xl-3">
@@ -40,10 +71,24 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                                            <p class="lead text-capitalize mb-0 font-size-small text-left">faction: {{ product.faction.friendly_name }}</p>
-                                            <p class="lead text-capitalize mb-0 font-size-small text-left">unit Type: {{ product.unit_type }}</p>
-                                            <p class="lead text-capitalize font-size-small text-left">setting: {{ product.setting }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}
+                                                {% if product.is_new %}
+                                                    <span class="bg-yellow text-black float-right rounded-1 badge">NEW!</span>
+                                                {% endif %}
+                                                {% if product.pre_order %}
+                                                    <span class="bg-gray text-white float-right rounded-1 badge">Pre Order Now</span>
+                                                {% endif %}
+                                            </p>
+                                            
+                                                
+                                            
+                                            {% if product.faction %}
+                                            <p class="text-capitalize font-size-small mb-0 text-left"><strong>faction:</strong> 
+                                                <a href="{% url 'products' %}?faction={{ product.faction.name }}" class="text-reset">{{ product.faction.friendly_name }}</a>
+                                            </p>
+                                            {% endif %}
+                                            <p class="text-capitalize mb-0 font-size-small text-left"><strong>unit Type:</strong> {{ product.unit_type }}</p>
+                                                <p class="text-capitalize font-size-small text-left"><strong>setting:</strong> {{ product.setting }}</p>
                                             <hr>
                                         </div>
                                     </div>

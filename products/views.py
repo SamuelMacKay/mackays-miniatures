@@ -24,7 +24,8 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'faction':
+                sortkey = 'faction__name'
             if'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -50,7 +51,6 @@ def all_products(request):
             factions = request.GET['faction'].split(',')
             products = products.filter(faction__name__in=factions)
             factions = Faction.objects.filter(name__in=factions)
-
 
         if request.GET:
             if 'q' in request.GET:

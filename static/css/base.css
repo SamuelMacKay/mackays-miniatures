@@ -81,6 +81,11 @@ body {
     z-index: -1;
 }
 
+a.faction-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -131,6 +136,16 @@ body {
     color: darkgreen;
 }
 
+.bg-yellow {
+    background-color: rgb(255, 230, 0) !important;
+}
+
+.bg-gray {
+    background-color: slategray !important;
+}
+
 .text-capitalize {
     text-transform: capitalize
 }
+
+
