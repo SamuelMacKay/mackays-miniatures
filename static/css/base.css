@@ -105,6 +105,7 @@ a.faction-badge > span.badge:hover {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    border-radius: 5px;
 }
 
 .btt-link {
@@ -188,4 +189,19 @@ a.faction-badge > span.badge:hover {
 
 .buy-hover:hover {
     background: darkgreen;
+}
+
+.increment-qty,
+.decrement-qty {
+    width: 24px;
+    padding: 0;
+}
+
+.input-group>.input-group-append:not(:last-child)>.btn {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ml-custom {
+    margin-left: 4.5rem !important;
 }
