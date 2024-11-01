@@ -108,7 +108,9 @@ a.faction-badge > span.badge:hover {
     border-radius: 5px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -159,7 +161,7 @@ a.faction-badge > span.badge:hover {
 }
 
 .text-darkgreen {
-    color: darkgreen;
+    color: darkgreen !important;
 }
 
 .bg-yellow {
@@ -204,4 +206,12 @@ a.faction-badge > span.badge:hover {
 
 .ml-custom {
     margin-left: 4.5rem !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.table-border-bottom {
+    border-bottom:  1px solid rgba(163, 172, 179, 0.3);
 }

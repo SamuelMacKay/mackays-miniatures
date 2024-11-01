@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -15,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Shopping Bag</h2>
+                <h2 class="logo-font">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -30,52 +31,83 @@
                                 <th scope="col">Product Info</th>
                                 <th scope="col"></th>
                                 <th scope="col">Price</th>
-                                <th scope="col">Qty</th>
+                                <th scope="col" class=" text-center">Qty</th>
                                 <th scope="col">Subtotal</th>
                             </tr>
                         </thead>
 
                         {% for item in bag_items %}
-                            <tr>
+                            <tr class="table-border-bottom">
                                 <td class="p-3 w-25">
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <h5 class="my-0"><strong>{{ item.product.name }}</strong></h5>
+                                    <br>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                    <br>
+                                    <p class="my-0 small text-capitalize text-muted">Faction: {{ item.product.faction }}</p>
+                                    <p class="my-0 small text-capitalize text-muted">Unit Type: {{ item.product.unit_type }}</p>
                                 </td>
                                 <td class="py-3">
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
-                                <td class="py-3 w-25">
-                                    <p class="my-0">{{ item.quantity }}</p>
+                                <td class="py-3 w-25 text-center">
+                                    <form action="{% url 'adjust_bag' item.item_id %}" class="form update-form" method="POST">
+                                    {% csrf_token %}
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-sm btn-black rounded-1"
+                                                        data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-minus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                <input class="form-control form-control-small qty_input" type="number" name="quantity"
+                                                    value="{{ item.quantity }}" min="1" max="99"
+                                                    data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-sm btn-black rounded-1"
+                                                        data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                        <span>
+                                                            <i class="fas fa-plus fa-sm"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <a class="update-link text-darkgreen float-left"><small>Update</small></a>
+                                    <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.product.price }}</p>
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                <h6 {% if free_delivery_delta == 0 %}class="text-darkgreen"{% endif %}>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4 text-darkgreen"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
                                     <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                        Add just <strong>${{ free_delivery_delta }}</strong> for free delivery!
                                     </p>
                                 {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <td colspan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1 btn-lg">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <a href="" class="btn btn-black rounded-0 btn-lg">
+                                <a href="" class="btn btn-black buy-hover rounded-1 btn-lg">
                                     <span class="text-uppercase">Secure Checkout</span>
                                     <span class="icon">
                                         <i class="fas fa-lock"></i>
@@ -84,6 +116,7 @@
                             </td>
                         </tr>
                     </table>
+                    <hr>
                 </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
@@ -97,4 +130,30 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super}}
+{% include 'products/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
 {% endblock %}
