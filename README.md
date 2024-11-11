@@ -1,4 +1,7 @@
 # Mackay's Miniatures
+MacKay's Miniatures is a platform that sells and distributes Warhammer Miniatures, for warhammer 40,0000 and Age of Sigmar.
+The website will have an easy navigate navbar, and search engine so you can find what you are looking for easily.
+An account page will let the users save their details, delivery address and view their previous purchases.
 
 
 ![Responsive Mockup](media/responsive-mockup.png)
@@ -6,11 +9,11 @@
 ## User Stories 
 |Story No.|Story|
 | ------------- | ------------- |
-|1| As the , <br>  <br> So  <br><br> I know I am done when |
-|2| As the , <br>  <br> So  <br><br> I know I am done when |
-|3| As the , <br>  <br> So  <br><br> I know I am done when |
-|4| As the , <br>  <br> So  <br><br> I know I am done when |
-|5| As the , <br>  <br> So  <br><br> I know I am done when |
+|1| As A first time user, <br> I want to be able to find what i am looking for with ease <br> So I can buy what I am looking for <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, and a sorting system |
+|2| As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional |
+|3| As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info ever time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location and payment method to auto fill. |
+|4| As the Owner of the site, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable.|
+|5| As A potential buyer , <br> Iwant to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it.|
 
 ***
 
@@ -18,7 +21,7 @@
 Below are the designs that I can use to build the site. I have used the user story numbers to link where I can meet the goal in my design. This will help me to think about the users needs as I build the page.
 
 ### Home Page Design<br>
-User Story Number - 1, 2 <br>
+User Story Number -  <br>
 ![Home Page Design]()
 
 
