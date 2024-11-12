@@ -75,10 +75,14 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}
                                                 {% if product.is_new %}
+                                                    <a href="{% url 'products' %}?new_releases">
                                                     <span class="bg-yellow text-black float-right rounded-1 badge">NEW!</span>
+                                                    </a>
                                                 {% endif %}
                                                 {% if product.pre_order %}
+                                                    <a href="{% url 'products' %}?pre_order">
                                                     <span class="bg-gray text-white float-right rounded-1 badge">Pre Order Now</span>
+                                                    </a>
                                                 {% endif %}
                                             </p>
                                             
