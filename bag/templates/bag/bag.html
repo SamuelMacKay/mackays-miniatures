@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font">Shopping Bag</h2>
+                <h2 class="logo-font text-center">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -29,7 +29,7 @@
                         <thead class="text-black">
                             <tr>
                                 <th scope="col">Product Info</th>
-                                <th scope="col"></th>
+                                <th class="d-none d-sm-block" scope="col"></th>
                                 <th scope="col">Price</th>
                                 <th scope="col" class=" text-center">Qty</th>
                                 <th scope="col">Subtotal</th>
@@ -38,7 +38,7 @@
 
                         {% for item in bag_items %}
                             <tr class="table-border-bottom">
-                                <td class="p-3 w-25">
+                                <td class="p-3 w-25 d-none d-sm-block">
                                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                 </td>
                                 <td class="py-3">
@@ -65,7 +65,7 @@
                                                         </span>
                                                     </button>
                                                 </div>
-                                                <input class="form-control form-control-small qty_input" type="number" name="quantity"
+                                                <input class="form-control bag-qty-padding form-control-small qty_input" type="number" name="quantity"
                                                     value="{{ item.quantity }}" min="1" max="99"
                                                     data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                                 <div class="input-group-append">
@@ -93,9 +93,9 @@
                                 <h6 {% if free_delivery_delta == 0 %}class="text-darkgreen"{% endif %}>Delivery: ${{ delivery|floatformat:2 }}</h6>
                                 <h4 class="mt-4 text-darkgreen"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
-                                        Add just <strong>${{ free_delivery_delta }}</strong> for free delivery!
-                                    </p>
+                                        <p class="mb-0 text-black font-size-medium p-0 btn bg-warning rounded-1 shadow-sm text-center">
+                                            Add just <strong>${{ free_delivery_delta }}</strong> for free delivery!
+                                        </p>
                                 {% endif %}
                             </td>
                         </tr>

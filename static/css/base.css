@@ -264,12 +264,18 @@ a.faction-badge > span.badge:hover {
     color: #fff !important;
 }
 
-.buy-hover:hover {
+.buy-hover:hover,
+.product-hover:hover {
     background: darkgreen;
 }
 
 .increment-qty,
 .decrement-qty {
+    width: 11px;
+    padding: 0;
+}
+
+.product-hover {
     width: 24px;
     padding: 0;
 }
@@ -289,4 +295,12 @@ a.faction-badge > span.badge:hover {
 
 .table-border-bottom {
     border-bottom:  1px solid rgba(163, 172, 179, 0.3);
+}
+
+.fa-sm {
+    font-size: .75em;
+}
+
+.bag-qty-padding {
+    padding: 0 0 0 5px !important;
 }
