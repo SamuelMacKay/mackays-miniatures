@@ -304,3 +304,12 @@ a.faction-badge > span.badge:hover {
 .bag-qty-padding {
     padding: 0 0 0 5px !important;
 }
+
+.tool-tip-position {
+    padding-left: 20px;
+}
+
+.tool-tip-color > i {
+    color: #ffc107 !important;
+}
+

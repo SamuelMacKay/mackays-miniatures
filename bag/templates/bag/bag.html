@@ -83,7 +83,13 @@
                                     <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>                                    
+                                    {% if item.product.pre_order %}
+                                        <span class="tool-tip-color tool-tip-position">
+                                            <i class="fa-solid fa-triangle-exclamation fa-xl" data-toggle="tooltip" data-placement="left" title="This Item is on PRE-ORDER and will be shipped when it is offically released"></i>
+                                            <div class="tooltip"></div>
+                                        </span>                                      
+                                    {% endif %}
                                 </td>
                             </tr>
                         {% endfor %}
@@ -154,6 +160,11 @@
          .done(function() {
              location.reload();
          });
+    })
+
+    // On Page load, Check if any item is Pre-Order, and send up a warning
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
     })
 </script>
 {% endblock %}
