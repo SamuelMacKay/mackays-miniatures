@@ -53,6 +53,14 @@
                         </div>
                         <div class="col-3 text-right">
                             <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            {% if item.product.pre_order %}
+                                <span class="tool-tip-color tool-tip-position">
+                                    <i class="fa-solid fa-triangle-exclamation fa-xl" data-toggle="tooltip" data-placement="left"
+                                        title="This Item is on PRE-ORDER and will be shipped when it is offically released">
+                                    </i>
+                                    <div class="tooltip"></div>
+                                </span>                                      
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}
@@ -148,4 +156,10 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script type="text/javascript">
+        // Loads tooltips for if pre-order = True
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 {% endblock %}

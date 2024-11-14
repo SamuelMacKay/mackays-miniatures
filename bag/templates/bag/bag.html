@@ -86,7 +86,9 @@
                                     <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>                                    
                                     {% if item.product.pre_order %}
                                         <span class="tool-tip-color tool-tip-position">
-                                            <i class="fa-solid fa-triangle-exclamation fa-xl" data-toggle="tooltip" data-placement="left" title="This Item is on PRE-ORDER and will be shipped when it is offically released"></i>
+                                            <i class="fa-solid fa-triangle-exclamation fa-xl" data-toggle="tooltip" data-placement="left"
+                                                title="This Item is on PRE-ORDER and will be shipped when it is offically released">
+                                            </i>
                                             <div class="tooltip"></div>
                                         </span>                                      
                                     {% endif %}
@@ -139,32 +141,32 @@
 {% endblock %}
 
 {% block postloadjs %}
-{{ block.super}}
-{% include 'products/includes/quantity_input_script.html' %}
+    {{ block.super}}
+    {% include 'products/includes/quantity_input_script.html' %}
 
-<script type="text/javascript">
-    // Update quantity on click
-    $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
-    })
+    <script type="text/javascript">
+        // Update quantity on click
+        $('.update-link').click(function(e) {
+            var form = $(this).prev('.update-form');
+            form.submit();
+        })
 
-    // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
+        // Remove item and reload on click
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/bag/remove/${itemId}`;
+            var data = {'csrfmiddlewaretoken': csrfToken};
 
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+            $.post(url, data)
+            .done(function() {
+                location.reload();
+            });
+        })
 
-    // Loads tooltips for if pre-order = True
-    $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
+        // Loads tooltips for if pre-order = True
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 {% endblock %}
