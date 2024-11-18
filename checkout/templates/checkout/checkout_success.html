@@ -190,9 +190,15 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-8">
-                <a href="{% url 'products' %}?pre_order" class="btn btn-black buy-hover rounded-1 my-2">
-                    <span class="text-uppercase">Take a look at the newest models and what is coming soon!</span>
-                </a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-black buy-hover rounded-1 my-2">
+                        <span class="text-uppercase">Head back to your Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}?pre_order" class="btn btn-black buy-hover rounded-1 my-2">
+                        <span class="text-uppercase">Take a look at the newest models and what is coming soon!</span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
