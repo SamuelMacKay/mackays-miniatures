@@ -327,11 +327,18 @@ input[name='q']::placeholder P{
     background: darkgreen;
 }
 
-.increment-qty,
-.decrement-qty {
+.increment-product-page,
+.decrement-product-page {
     width: 11px;
     padding: 0;
 }
+
+.increment-bag-page,
+.decrement-bag-page {
+    width: 24px;
+    padding: 0;
+}
+
 
 .product-hover {
     width: 24px;
