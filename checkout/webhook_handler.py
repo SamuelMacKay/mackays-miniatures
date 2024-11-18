@@ -18,6 +18,7 @@ class StripeWH_Handler:
     def __init__(self, request):
         self.request = request
 
+
     def _send_confirmation_email(self, order):
         """
         Sends a automatic confirmation email
@@ -37,6 +38,7 @@ class StripeWH_Handler:
             [cust_email]
         )
 
+
     def handle_event(self, event):
         """
         Handle a generic/unknown/unexpected webhook event
@@ -45,6 +47,7 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Unhandled Webhook received: {event["type"]}',
             status=200)
+
 
     def handle_payment_intent_succeeded(self, event):
         """
@@ -150,7 +153,8 @@ class StripeWH_Handler:
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
-    
+
+
     def handle_payment_intent_payment_failed(self, event):
         """
         Handle a payment_intent.payment_failed webhook event from Stripe
