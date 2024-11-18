@@ -10,10 +10,10 @@ import stripe
 @require_POST
 @csrf_exempt
 def webhook(request):
-    """ liste for webhooks from stripe """
+    """ listen for webhooks from stripe """
     # Setup
     wh_secret = settings.STRIPE_WH_SECRET
-    stripe.api.key = settings.STRIPE_SECRET_KEY
+    stripe.api_key = settings.STRIPE_SECRET_KEY
 
     # Get the webhook data and verify its signature
     payload = request.body
