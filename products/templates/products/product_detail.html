@@ -20,7 +20,7 @@
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                     {% else %}
-                        <a href=" {{ product.image.url }} ">
+                        <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}placeholder.jpg" alt="{{ product.name }}">
                         </a>
                     {% endif %}
@@ -30,6 +30,18 @@
                 <div class="product-details-container bg-white mb-5 mt-md-5">
                     <h2 class="text-uppercase text-black font-weight-bold">{{ product.name }}</h2>
                     <br>
+                    {% if request.user.is_superuser %}
+                        <br>
+                        <small class="pb-5 float-right">
+                            <a class="text-darkgreen" href="{% url 'edit_product' product.id %}">
+                                <i class="fas fa-cog fa-xl"></i>
+                            </a>
+                            |
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">
+                                <i class="fas fa-trash-can fa-xl"></i>
+                            </a>
+                        </small>
+                    {% endif %}
                     <p class="lead text-left text-size-large text-darkgreen font-weight-bold">£{{ product.price }}
                         {% if product.is_new %}
                             <a href="{% url 'products' %}?new_releases">
