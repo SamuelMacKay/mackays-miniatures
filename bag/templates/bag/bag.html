@@ -39,10 +39,14 @@
                         {% for item in bag_items %}
                             <tr class="table-border-bottom">
                                 <td class="p-3 w-25 d-none d-sm-block">
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    {% if item.product.image %}
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="an image of {{ item.product.name }}">
+                                    {% else %}
+                                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}placeholder.jpg" alt="A place holder for {{ item.product.name }}">
+                                    {% endif %}
                                 </td>
                                 <td class="py-3">
-                                    <h5 class="my-0"><strong>{{ item.product.name }}</strong></h5>
+                                    <h5 class="my-0 text-capitalize"><strong>{{ item.product.name }}</strong></h5>
                                     <br>
                                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     <br>
