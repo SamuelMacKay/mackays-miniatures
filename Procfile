@@ -1,0 +1,1 @@
+web: gunicorn mackays_miniatures.wsgi:application
