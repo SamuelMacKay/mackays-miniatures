@@ -1,8 +1,9 @@
-{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name="Mackay's Miniatures" site_domain='https://mackays-miniatures-sam-m-29767862f4e8.herokuapp.com/' %}Hello from {{ site_name }}!!
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with site_name="Mackay's Miniatures" site_domain='https://mackays-miniatures-sam-m-29767862f4e8.herokuapp.com/' %}Hello there, {{user_display}}!!
+We here at {{ site_name }} wish to welcome you to our website!!
 
-We are contacting you on this email address because User: {{ user_display }} has used this as the e-mail address for their account.
+We have sent you this email, because User: "{{ user_display }}" has used this as the e-mail address for their account.
 
-To confirm this is you, and correct, go to {{ activate_url }}
+To confirm this is you, and correct, please use the following link to confirm your email address: {{ activate_url }}
 {% endblocktrans %}
 {% blocktrans with site_name="Mackay's Miniatures" site_domain='https://mackays-miniatures-sam-m-29767862f4e8.herokuapp.com/' %}Thank you from {{ site_name }}!
 {{ site_domain }}{% endblocktrans %}
