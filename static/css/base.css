@@ -302,14 +302,48 @@ input[name='q']::placeholder P{
       .header-container {
           padding-top: 116px;
       }
-}
-/* end of code institute CSS*/
 
-@media (max-width: 425px) {
-    .nav-link {
-        padding: 0;
+      body {
+        height: calc(100vh - 116px);
+      }
+
+      .display-4.logo-font.text-black {
+        font-size: 2rem;
+      }
+
+      .nav-link {
+        padding: 0.15rem;
+      }
+
+      .nav-link i.fa-lg {
+        font-size: 1rem;
+      }
+
+      .navbar-toggler {
+        padding:  .6rem .6rem;
+        font-size: 1rem;
+      }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-1,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-1.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
     }
 }
+
+/* end of code institute CSS*/
+
+/* font and text */
+
 
 .font-size-small {
     font-size: small;
@@ -319,6 +353,19 @@ input[name='q']::placeholder P{
     font-size: 30px;
 }
 
+.text-capitalize {
+    text-transform: capitalize
+}
+
+.text-center {
+    text-align: center;
+}
+
+.fa-sm {
+    font-size: .75em;
+}
+
+/* Color */
 .text-darkgreen {
     color: darkgreen !important;
 }
@@ -331,18 +378,11 @@ input[name='q']::placeholder P{
     background-color: slategray !important;
 }
 
-.text-capitalize {
-    text-transform: capitalize
-}
-
 .btn-grey {
     background: slategray;
     color: white;
 }
 
-.input-group-width {
-    width: 110px;
-}
 .reverse-hover:hover {
     background: #212529 !important;
     color: #fff !important;
@@ -351,6 +391,19 @@ input[name='q']::placeholder P{
 .buy-hover:hover,
 .product-hover:hover {
     background: darkgreen;
+}
+
+.table-border-bottom {
+    border-bottom:  1px solid rgba(163, 172, 179, 0.3);
+}
+
+/* Width and paddings */
+.tool-tip-color > i {
+    color: #ffc107 !important;
+}
+
+.input-group-width {
+    width: 110px;
 }
 
 .increment-product-page,
@@ -380,18 +433,6 @@ input[name='q']::placeholder P{
     margin-left: 4.5rem !important;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.table-border-bottom {
-    border-bottom:  1px solid rgba(163, 172, 179, 0.3);
-}
-
-.fa-sm {
-    font-size: .75em;
-}
-
 .bag-qty-padding {
     padding: 0 0 0 5px !important;
 }
@@ -399,8 +440,3 @@ input[name='q']::placeholder P{
 .tool-tip-position {
     padding-left: 20px;
 }
-
-.tool-tip-color > i {
-    color: #ffc107 !important;
-}
-

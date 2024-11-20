@@ -63,7 +63,7 @@
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
+                                <p><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -89,18 +89,18 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1 mt-5">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-1">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-1 text-uppercase mt-5 buy-hover" value="{% if product.pre_order %}Pre Order{% else %}Add to Bag{% endif %}">
+                                <input type="submit" class="btn btn-black rounded-1 text-uppercase buy-hover" value="{% if product.pre_order %}Pre Order{% else %}Add to Bag{% endif %}">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
-                    <p class="mt-3">{{ product.description }}</p>
+                    <p class="mt-5">{{ product.description }}</p>
                 </div>
             </div>
         </div>
