@@ -35,7 +35,6 @@ class StripeWH_Handler:
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
-            settings.DEFAULT_LANDLINE,
             [cust_email]
         )
 

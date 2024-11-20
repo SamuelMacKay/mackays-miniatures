@@ -10,21 +10,21 @@ Order Number:
 Order Date: 
 Phone: 
 
-Order Total: £{{ }}
-Delivery: £{{ }}
-Grand Total: £{{ }}
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
 
 Your order will be shipped to:
-{{ order.street_address_1 }}
-{% if order.street_address_2 %}
-    {{ order.street_address_2 }}
+{{ order.street_address1 }}
+{% if order.street_address2 %}
+{{ order.street_address2 }}
 {% endif %}
 {% if order.county %}
-    {{ order.county }}
+{{ order.county }}
 {% endif %}
 {{ order.town_or_city }}
 {% if order.postcode %}
-    {{ order.postcode }}
+{{ order.postcode }}
 {% endif %}
 {{ order.country }}
 
