@@ -313,11 +313,12 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 ## Credits
   
 ### Content
-- Processes from the CI task manager mini project was used to help create this website - [Task-Manager-Mini-Project](https://github.com/Code-Institute-Solutions/TaskManagerAuth/tree/main)
+- Processes from the CI task manager mini project was used to help create this website - [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
 - HTML, CSS and Javascript code help was taken from w3schools - [W3Schools](https://www.w3schools.com/)
 
 ### Media
+- Images are place holders but are taken from the site: [Warhammer](https://www.warhammer.com/en-GB/home) WOULD HAVE TO USE OWN IMAGES OR GET PERMISSION FROM GW AS AN OFFICAL RETAILER
 
 #### Icons
 - All page Icons - [Font Awesome](https://fontawesome.com/)
