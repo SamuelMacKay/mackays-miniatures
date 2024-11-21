@@ -164,24 +164,56 @@ This is a sample of shots of what the site looks like on different devices.
 #### Desktop
 |Firefox 128.0.2| Chrome 127.0.6533.72/73 / 23 July 2024|
 | ------------- | ------------------ |
-|![firefox home page]()|![chrome home page]()|
+|![firefox home page](images/firefox-home-live.png)|![chrome home page](images/chrome-home-live.png)|
+|![firefox sign up page](images/firefox-signup-live.png)|![chrome sign up page](images/chrome-sign-up-live.png)|
+|![firefox sign in page](images/firefox-signin-live.png)|![chrome sign in page](images/chrome-sign-in-live.png)|
+|![firefox product page](images/firefox-product-live.png)|![chrome product page](images/chrome-product-live.png)|
+|![firefox product detail page](images/firefox-product-detail-live.png)|![chrome product detail page](images/chrome-product-detail-live.png)|
+|![firefox product manage page](images/firefox-product-management-live.png)|![chrome product manage page](images/chrome-product-manage-live.png)|
+|![firefox invoice page](images/firefox-invoice-live.png)|![chrome invoice page](images/chrome-invoice-live.png)|
+|![firefox checkout page](images/firefox-checkout-live.png)|![chrome checkout page](images/chrome-checkout-live.png)|
+|![firefox profile page](images/firefox-profile-live.png)|![chrome profile page](images/chrome-profile-live.png)|
 
 
-| Firefox 128.0.2 medium | Chrome 127.0.6533.72/73 / 23 July 2024 medium |
-| ------------- | ------------------ |
-|![firefox home medium]()|![chrome home page medium]()|
-
-
-| Firefox 128.0.2 small | Chrome 127.0.6533.72/73 / 23 July 2024 small |
-| ------------- | ------------------ |
-|![firefox home small]()|![chrome home page small]()|
+| Firefox 128.0.2 medium & Chrome 127.0.6533.72/73 / 23 July 2024 medium |
+|![chrome  and firefox home page medium](images/medium-home-live.png)|
+|![chrome  and firefox home page medium](images/medium-sign-up-live.png)|
+|![chrome  and firefox home page medium](images/medium-sign-in-live.png)|
+|![chrome  and firefox home page medium](images/medium-product-detail-live.png)|
+|![chrome  and firefox home page medium](images/medium-product-manage-live.png)|
+|![chrome  and firefox home page medium](images/medium-product-live.png)|
+|![chrome  and firefox home page medium](images/medium-invoice-live.png)|
+|![chrome  and firefox home page medium](images/medium-checkout-live.png)|
+|![chrome  and firefox home page medium](images/medium-profile-live.png)|
 
 #### Mobile
 
 ##### Safari iOS Phone 17.5
 | iPhone home page |
-![iPhone home page](media/mobile-home.JPG)
+![iPhone home page](images/mobile-home-live.PNG)
 
+| iPhone sign up page |
+![iPhone sign up page](images/mobile-sign-up-live.PNG)
+
+| iPhone sign in page |
+![iPhone sign in page](images/mobile-sign-in-live.PNG)
+
+| iPhone profile page |
+![iPhone profile page 1](images/mobile-profile-live.PNG)
+![iPhone profile page 2](images/mobile-profile-live-2.PNG)
+
+| iPhone product page |
+![iPhone product page](images/mobile-product-live.PNG)
+
+| iPhone product manage page |
+![iPhone product manage page](images/mobile-product-manage-live.PNG)
+
+| iPhone invoice page |
+![iPhone invoice page 1](images/mobile-invoice-live.PNG)
+![iPhone invoice page 2](images/mobile-invoice-live-2.PNG)
+
+| iPhone cart page |
+![iPhone cart page](images/mobile-cart-live-2.jpg)
 ### Validator Testing
 - HTML
     - home.html: No errors were returned when passing through the official W3C validator [validation]()|<br> 
