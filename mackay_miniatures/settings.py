@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEVELOPMENT")
 
 ALLOWED_HOSTS = ['mackays-miniatures-sam-m-29767862f4e8.herokuapp.com', '8000-samuelmacka-mackaysmini-od5sa4qu8rf.ws.codeinstitute-ide.net']
 
