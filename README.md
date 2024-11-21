@@ -136,15 +136,20 @@ User Story Number 3,7 -  <br>
 
 - __Invoice Page__
 
-  - a form that will only accept valid info for shipping info
-  - a list summary of models in cart and total cost
-  - an option to save your currently input information to your profile
-  - a stripe secure payment method at will responsivly update to any errors
-  - a warning to say how much you will be charged
-  - a quick back to cart button if you want to edit anything
-  - the warning for pre order models will show here too
+  - A notification of what email address the invoice has been sent to
+  - All important information for the invoice will be displayed
+  - if logged in with an account when making purchase, can return to this page to check on purchases
+  - a toast of the order number and email will pop up too
+
 
 ![INVOICE PAGE](images/invoice-page-live.png)
+
+- __NOTIFICATIONS__
+
+- all useful info pop ups will show up like this
+
+![NOTIFY pt1](images/toast-1.png)
+![NOTIFY pt1](images/toast-2.png)
 
 
 ### Features Left to Implement
