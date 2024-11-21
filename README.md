@@ -9,11 +9,21 @@ An account page will let the users save their details, delivery address and view
 ## User Stories 
 |Story No.|Story|
 | ------------- | ------------- |
-|1| As A first time user, <br> I want to be able to find what i am looking for with ease <br> So I can buy what I am looking for <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, and a sorting system |
+|1| As The Site Owner, <br> I want to be users to be able to find what they are looking for with ease <br> So they will be more likely to buy from me <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, a gallery style product page and a sorting system |
+
 |2| As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional |
-|3| As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info ever time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location and payment method to auto fill. |
-|4| As the Owner of the site, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable.|
-|5| As A potential buyer , <br> Iwant to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it.|
+
+|3| As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable.|
+
+|4| As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interctions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above.|
+
+|5| As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info every time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location auto fill. |
+
+|6| As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it.|
+
+|7| As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should recieve <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner.|
+
+|8| As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website.|
 
 ***
 
@@ -21,10 +31,30 @@ An account page will let the users save their details, delivery address and view
 Below are the designs that I can use to build the site. I have used the user story numbers to link where I can meet the goal in my design. This will help me to think about the users needs as I build the page.
 
 ### Home Page Design<br>
-User Story Number -  <br>
-![Home Page Design]()
+User Story Number 1 -  <br>
+![NAV BAR](images/nav-bar-wireframes.png)
 
+User Story Number 1 -  <br>
+![HOME PAGE](images/home-page-wireframe.png)
 
+User Story Number 1,3 -  <br>
+![PRODUCT PAGE](images/product-page-wireframe.png)
+
+User Story Number 5,7 -  <br>
+![PROFILE PAGE](images/profile-page-wireframe.png)
+
+User Story Number 2,6 -  <br>
+![CART PAGE](images/cart-page-wireframe.png)
+
+User Story Number 8 -  <br>
+![EDIT PAGE](images/edit-product-wireframe.png)
+![ADD PAGE](images/add-product-wireframe.png)
+
+User Story Number 4 -  <br>
+![NOTIFY PAGE](images/notification-wireframe.png)
+
+User Story Number 3,7 -  <br>
+![INVOICE PAGE](images/invoice-page-wireframe.png)
 ***
 
 ## Features
@@ -33,22 +63,93 @@ User Story Number -  <br>
 
 - __Navigation Bar__
 
-  - 
+  - Links to all pages and is fixed to top
+  - resizes for responsive mobile use
+  - search bar to search for models
+  - account button that links to profile and (for admin) product managment
+  - account button changes to sign in/sign up button when not logged in
+  - a banner to show how much you need to spend for free delivery
 
-![Nav Bar]()
+![Nav Bar](images/nav-bar-live.png)
 
 - __Home page__
 
-  - 
+  - A powerful artwork that shows the theme and setting of some of the models available
+  - links to start shopping as a big button 
+  - call to action to tell you what the button does
 
-![Home Page]()
+![Home Page](images/home-page-live.png)
 
+- __Product page__
+
+  - A display of models
+  - allows adding to bag from product page
+  - has indicator for if its new or pre-order
+  - can sort alphabetically by setting, faction, name or price
+  - can filter but using nav bar options to only show specific factions/settings
+
+![Home Page](images/product-page-live.png)
+
+- __Manage Product Page__
+
+  - A form that will add a product to the website
+  - will only take valid inputs
+  - can supply an image, otherwise a place holder will take over
+  - is the same for edit and add, but edit will auto fill with product info
+
+![manage product pt1](images/manage-product-pt1.png)
+![manage product pt1](images/manage-product-pt2.png)
+
+- __Profile Page__
+
+  - Has a form to save delivery info to your account
+  - shows a list of old orders and can open up their invoice pages
+  - will auto fill the form with data from checkout if save info is checked
+  - can update info at any time
+
+![PROFILE PAGE](images/profile-page-live.png)
+
+- __Shopping Cart__
+
+  - Has info for each model in cart
+  - has a cost per model and a calculated total cost based on qty
+  - can edit qty and remove any thing from the cart page
+  - shows a warning sign for how far way from free shipping you are
+  - shows a warning sign if any product is pre orde with a tool tip attached
+  - tells you current cost, delivery cost and adds it together for a grand total
+  - cart icon on nav bar updates with current cost of cart
+
+![SHOPPING CART](images/cart-page-live.png)
+
+- __Check out__
+
+  - a form that will only accept valid info for shipping info
+  - a list summary of models in cart and total cost
+  - an option to save your currently input information to your profile
+  - a stripe secure payment method at will responsivly update to any errors
+  - a warning to say how much you will be charged
+  - a quick back to cart button if you want to edit anything
+  - the warning for pre order models will show here too
+
+![CHECKOUT pt1](images/checkout-page-pt1.png)
+![CHECKOUT pt2](images/checkout-page-pt2.png)
+
+- __Invoice Page__
+
+  - a form that will only accept valid info for shipping info
+  - a list summary of models in cart and total cost
+  - an option to save your currently input information to your profile
+  - a stripe secure payment method at will responsivly update to any errors
+  - a warning to say how much you will be charged
+  - a quick back to cart button if you want to edit anything
+  - the warning for pre order models will show here too
+
+![INVOICE PAGE](images/invoice-page-live.png)
 
 
 ### Features Left to Implement
 
-- a way to rate reviews
-- have comment board/forum
+- 
 
 
 ## Testing
@@ -130,7 +231,7 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 
 | Home  |
 | ------- |
-| ![lighthouse result home page](media/get_reviews-lighthouse.png) |
+| ![lighthouse result home page]() |
 
 ## Deployment
 
@@ -168,7 +269,7 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
  9. Click on Deploy.
  10. The page will then provide the url to the python terminal.
 
- The live link can be found here - []()
+ The live link can be found here - [mackays-miniatures-sam-m](https://mackays-miniatures-sam-m-29767862f4e8.herokuapp.com/)
 
 ## Credits
   

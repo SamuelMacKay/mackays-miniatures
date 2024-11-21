@@ -440,3 +440,7 @@ input[name='q']::placeholder P{
 .tool-tip-position {
     padding-left: 20px;
 }
+
+.call-to-action-margin {
+    margin-top: 8rem !important;
+}
