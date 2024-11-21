@@ -219,7 +219,9 @@ This is a sample of shots of what the site looks like on different devices.
     - home.html: No errors were returned when passing through the official W3C validator [validation]()|<br> 
 
 - CSS 
-    - style.css: No errors were returned when passing through offical Jigsaw validator ![]()|<br> 
+    - base.css: No errors were returned when passing through offical Jigsaw validator ![base css](images/base-css-validator.png)|<br> 
+    - profile.css: No errors were returned when passing through offical Jigsaw validator ![profile css](images/profile.css.png)|<br> 
+    - checkout.css: No errors were returned when passing through offical Jigsaw validator ![checkout css](images/checkout-css-validator.png)|<br> 
 
 - JS 
     - script.js: No errors were returned when passing through offical Jigsaw validator ![]()|<br> 
