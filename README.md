@@ -232,12 +232,27 @@ This is a sample of shots of what the site looks like on different devices.
     - checkout.css: No errors were returned when passing through offical Jigsaw validator ![checkout css](images/checkout-css-validator.png)|<br> 
 
 - JS 
-    - script.js: No errors were returned when passing through offical Jigsaw validator ![]()|<br> 
+    - stripe_elements.js: No errors were returned when passing through offical JSHint validator ![stripe-elements-js-JSHINT](images/stripe-elements-JSHint.png)|<br> 
 
-    - password_validate.js: No errors were returned when passing through offical Jigsaw validator ![]()|<br> 
+    - countryfield.js: No errors were returned when passing through offical JSHint validator ![country-field-js](images/countryfield-jshint.png)|<br> 
+    
+    - add_products.html built in js: No errors were returned when passing through offical JSHint validator ![add-products-html-inbuilt](images/add-products-html-inbuilt-js.png)|<br> 
+
+    - edit_products.html built in js: No errors were returned when passing through offical JSHint validator ![edit-products-html-inbuilt](images/edit-products-html-inbuilt-js.png)|<br> 
+
+    - checkout_html built in js: No errors were returned when passing through offical JSHint validator ![checkout_html built in js](images/checkout-html-inbuilt-js.png)|<br> 
+    
+    - bag_html built in js: No errors were returned when passing through offical JSHint validator ![bag_html built in js](images/bag-html-inbuilt-js.png)|<br> 
+
+    - products_html built in js: No errors were returned when passing through offical JSHint validator ![products_html built in js](images/products-html-inbuilt-js.png)|<br> 
+
+    - quantity_input.js: No errors were returned when passing through offical JSHint validator ![quantity_input.js](images/quantity-input-script-jshint.png)|<br> 
 
 - Python
     - app.py:  No errors were returned when passing through CI Python Linter ![]()<br>
+
+- Lighthouse
+    - home:  ![]()<br>
 
 ### Manual Testing
 - I have tested that this page works in different web browsers.
@@ -266,11 +281,14 @@ New code:
 ### User stories Testing
 |Story No.|Result|Story/ Evidence|
 | ------------- | ------------- | ------------- |
-|1|<font color="green"></font> | <br><br> Evidence: <br> ![]()|
-|2|<font color="green">Test Pass</font> | <br><br> Evidence: <br><br> ![]()|
-|3|<font color="green"></font> | <br><br> Evidence: <br><br>![]()||
-|4|<font color="green"></font> | <br><br> Evidence: <br><br> ![]()|
-|5|<font color="green"></font> | <br><br> Evidence: <br><br> ![]()|
+|1|<font color="green">Test Pass</font> | <br> As The Site Owner, <br> I want to be users to be able to find what they are looking for with ease <br> So they will be more likely to buy from me <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, a gallery style product page and a sorting system. <br> Evidence: <br> ![]()|
+|2|<font color="green">Test Pass</font> | <br>  As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional.  <br> Evidence: <br><br> ![]()|
+|3|<font color="green"></font> | <br> As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable. <br> Evidence:  <br><br>![]()||
+|4|<font color="green"></font> | <br> As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interctions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above. <br> Evidence: <br><br> ![]()|
+|5|<font color="green"></font> | <br> As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info every time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location auto fill. <br> Evidence: <br><br> ![]()|
+|6|<font color="green"></font> | <br> As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it. <br> Evidence: <br><br> ![]()|
+|7|<font color="green"></font> | <br> As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should recieve <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner. <br> Evidence: <br><br> ![]()|
+|8|<font color="green"></font> | <br> As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website. <br> Evidence: <br><br> ![]()|
 
 ### Accessibility Testing
 
