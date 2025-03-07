@@ -6,6 +6,14 @@ An account page will let the users save their details, delivery address and view
 
 ![Responsive Mockup](media/responsive-mockup.png)
 
+2. [User Stories](#user-stories)
+3. [Wire Frames](#wireframes)
+4. [Features](#features)
+5. [Testing](#testing)
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+
 ## User Stories 
 |Story No.|Story|
 | ------------- | ------------- |
