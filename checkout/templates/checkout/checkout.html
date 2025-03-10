@@ -39,7 +39,7 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a aria-label="image of item in cart" href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
@@ -102,8 +102,8 @@
                                 <input type="checkbox" id="id-save-info" name="save-info" class="form-check-input ml-2 mr-0" checked>
                             {% else %}
                                 <label class="form-check-label" for="id-save-info">
-                                    <a href="{% url 'account_signup' %}" class="text-info">Create an Account</a> or
-                                    <a href="{% url 'account_login' %}" class="text-info">Login</a> to save this information for next time!
+                                    <a href="{% url 'account_signup' %}" class="text-darkgreen">Create an Account</a> or
+                                    <a href="{% url 'account_login' %}" class="text-darkgreen">Login</a> to save this information for next time!
                                 </label>
                             {% endif %}
                         </div>
@@ -125,7 +125,7 @@
                             </span>
                             <span class="font-weight-bold">Adjust Cart</span>
                         </a>
-                        <button class="btn btn-black rounded-1" id="submit-button">
+                        <button aria-label="Complete order" class="btn btn-black rounded-1" id="submit-button">
                             <span class="font-weight-bold">Complete Order</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
