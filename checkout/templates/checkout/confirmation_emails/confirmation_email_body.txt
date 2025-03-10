@@ -29,9 +29,9 @@ Your order will be shipped to:
 {{ order.country }}
 
 ** PLEASE BE AWARE:
-If any of the items you have purchased are for PRE-ORDER, they will be shipped on their offical release date, A long with the remainder of your Order!
+If any of the items you have purchased are for PRE-ORDER, they will be shipped on their offical release date, along with the remainder of your Order!
 
-If you have any inquires, concerns or issues, please dont't hesitate to contact us via email at {{ contact_email }}, 
+If you have any inquires, concerns or issues, please do not hesitate to contact us via email at {{ contact_email }}, 
 Or call us directly at {{ contact_landline }}
 
 We hope you enjoy your new models!
