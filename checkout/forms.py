@@ -1,10 +1,13 @@
+""" Checkout forms """
 
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ The order form for completing a purchase """
     class Meta:
+        """ gets all relevant information to complete and order """
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',

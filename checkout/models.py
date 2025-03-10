@@ -1,3 +1,5 @@
+""" Checkout models """
+
 import uuid
 
 from django.db import models
@@ -11,6 +13,7 @@ from profiles.models import UserProfile
 
 
 class Order(models.Model):
+    """ all fields for the checkout form """
     order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, blank=True, related_name='orders')
@@ -43,7 +46,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total')) ['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
@@ -67,10 +70,14 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    """ Sets the quantity of product in bag """
+    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE,
+                              related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    quantity = models.IntegerField(null=False,
+                                   blank=False, default=0)
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False, editable=False)
 
 
     def save(self, *args, **kwargs):

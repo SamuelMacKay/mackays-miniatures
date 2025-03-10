@@ -1,10 +1,13 @@
+""" context for bag contents and mathing out delivery threshold """
+
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
 def bag_contents(request):
-    
+    """ maths out the cost of the current cart with delivery costs, if required """
+
     bag_items = []
     total = 0
     product_count = 0

@@ -1,3 +1,5 @@
+""" URL's for checkout links and stripe webhook """
+
 from django.urls import path
 from . import views
 from .webhooks import webhook

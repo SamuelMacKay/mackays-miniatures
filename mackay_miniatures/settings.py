@@ -29,7 +29,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEVELOPMENT")
 
-ALLOWED_HOSTS = ['mackays-miniatures-sam-m-29767862f4e8.herokuapp.com', '8000-samuelmacka-mackaysmini-od5sa4qu8rf.ws.codeinstitute-ide.net','*']
+ALLOWED_HOSTS = [
+    'mackays-miniatures-sam-m-29767862f4e8.herokuapp.com',
+    '8000-samuelmacka-mackaysmini-od5sa4qu8rf.ws.codeinstitute-ide.net',
+    '*'
+    ]
 
 
 # Application definition
@@ -224,7 +228,7 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-    
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

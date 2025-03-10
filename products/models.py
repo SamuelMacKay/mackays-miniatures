@@ -1,20 +1,24 @@
+""" Product Models """
+
 from django.db import models
 
 
 class Faction(models.Model):
+    """ Faction name in data base and user friendly version """
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
 
     def __str__(self):
         return self.name
-    
+
 
     def get_friendly_name(self):
         return self.friendly_name
 
 
 class UnitType(models.Model):
+    """ Unit type name """
     name = models.CharField(max_length=254)
 
 
@@ -23,6 +27,7 @@ class UnitType(models.Model):
 
 
 class Product(models.Model):
+    """ All fields for each product """
     faction = models.ForeignKey('Faction', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)

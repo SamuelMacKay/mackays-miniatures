@@ -1,5 +1,8 @@
+""" urls for bag CRUD interactivity, like add, adjust and remove buttons """
+
 from django.urls import path
 from . import views
+
 
 urlpatterns = [
     path('', views.view_bag, name='view_bag'),

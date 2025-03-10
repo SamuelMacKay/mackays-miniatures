@@ -1,3 +1,5 @@
+""" Products views """
+
 from django.shortcuts import render,  redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -11,7 +13,7 @@ from .forms import ProductForm
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
-    
+
     products = Product.objects.all()
     query = None
     factions = None
@@ -43,7 +45,7 @@ def all_products(request):
         if 'pre_order' in request.GET:
             pre_order = request.GET['pre_order']
             products = products.filter(pre_order=True)
-        
+
         if 'specials' in request.GET:
             specials = request.GET['specials']
             products = products.filter(
@@ -62,7 +64,7 @@ def all_products(request):
                 if not query:
                     messages.error(request, "You didn't enter any search criteria!")
                     return redirect(reverse('products'))
-                
+
                 queries = Q(name__icontains=query) | Q(setting__icontains=query)
                 products = products.filter(queries)
 
@@ -83,7 +85,7 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show specific product details """
-    
+
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -115,7 +117,7 @@ def add_product(request):
     context = {
         'form': form,
     }
-    
+
     return render(request, template, context)
 
 
@@ -144,7 +146,7 @@ def edit_product(request, product_id):
         'form': form,
         'product': product,
     }
-    
+
     return render(request, template, context)
 
 
@@ -152,11 +154,10 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-            messages.error(request, 'Sorry, only store owners can do that!')
-            return redirect(reverse('home'))
-    
+        messages.error(request, 'Sorry, only store owners can do that!')
+        return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect (reverse('products'))
-

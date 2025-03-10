@@ -1,3 +1,5 @@
+""" urls for home page link"""
+
 from django.urls import path
 from . import views
 

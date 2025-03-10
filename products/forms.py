@@ -1,12 +1,16 @@
+""" Forms for product information in store """
+
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Faction
 
 
 class ProductForm(forms.ModelForm):
+    """ form for displaying product information """
 
 
     class Meta:
+        """ gets all fields from Product model """
         model = Product
         fields = '__all__'
 
