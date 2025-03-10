@@ -24,10 +24,15 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    font-size: 1.8rem;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+.pre-order-bg {
+    background: #000 !important;
 }
 
 .shop-now-button {
@@ -434,4 +439,12 @@ input[name='q']::placeholder P{
 
 .call-to-action-margin {
     margin-top: 8rem !important;
+}
+
+#index-main-feature-text {
+    font-size: 1.5rem;
+}
+
+#shipping-threshold {
+    font-size: 1.8rem;
 }
