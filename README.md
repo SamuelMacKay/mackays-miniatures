@@ -307,7 +307,8 @@ Old code:
 ```
 New code:
 
-```
+```django
+{% raw %}
               {% if request.user.is_superuser %}
                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                {% endif %}
@@ -315,6 +316,7 @@ New code:
                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
            {% else %}
                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+{% endraw %}
 
 ```
 
@@ -350,14 +352,20 @@ Your order information is as below:
 - Both edit and add forms were not displaying the set image correctly, added more for statements in the html and some js to get it function as intended,the same changes were made to both add_product.html and edit_product.html.
 
 Old html code:
-```
+```django
+{% raw %}
+
 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                      {% csrf_token %}
                      {{ form | crispy }}
+{% endraw %}
+
 ```
 New html code:
 
-```
+```django
+{% raw %}
+
 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                      {% csrf_token %}
                      {% for field in form %}
@@ -367,6 +375,8 @@ New html code:
                              {{ field }}
                          {% endif %}
                      {% endfor %}
+{% endraw %}
+
 ```
 
 
@@ -420,18 +430,24 @@ New code:
 #### Bug 6
 - I missed a typo on the confirm your order button
 Old code:
-```
+```django
+{% raw %}
+
 <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-1">
                          <span class="text-uppercase">Confrim your order</span>
                      </a>
+{% endraw %}
 
 ```
 New code:
 
-```
+```django
+{% raw %}
+
 <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-1">
                          <span class="text-uppercase">Confirm your order</span>
                      </a>
+{% endraw %}
 
 ```
 
