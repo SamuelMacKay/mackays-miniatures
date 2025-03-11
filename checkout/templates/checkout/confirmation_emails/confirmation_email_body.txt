@@ -4,7 +4,7 @@ Thank you for your patronage!
 
 We are sending this email to confirm your order from Mackay's Miniatures!
 
-Your order informaton is as below:
+Your order information is as below:
 
 Order Number: {{ order.order_number}}
 Order Date: {{ order.date }}
@@ -29,7 +29,7 @@ Your order will be shipped to:
 {{ order.country }}
 
 ** PLEASE BE AWARE:
-If any of the items you have purchased are for PRE-ORDER, they will be shipped on their offical release date, along with the remainder of your Order!
+If any of the items you have purchased are for PRE-ORDER, they will be shipped on their official release date, along with the remainder of your Order!
 
 If you have any inquires, concerns or issues, please do not hesitate to contact us via email at {{ contact_email }}, 
 Or call us directly at {{ contact_landline }}

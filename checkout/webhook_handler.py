@@ -1,4 +1,4 @@
-"""  """
+""" checkout webhook handlers for string and confirmation emails """
 
 import json
 import time
