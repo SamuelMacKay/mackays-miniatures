@@ -459,4 +459,8 @@ input[name='q']::placeholder P{
     #hide-on-sm {
        display: none;
     }
+
+    .navbar {
+        padding: .5rem .5rem !important;
+    }
 }
