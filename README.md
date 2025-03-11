@@ -382,7 +382,9 @@ New html code:
 
 New js code:
 
-```
+```django
+{% raw %}
+
 {% block postloadjs %}
      {{ block.super }}
      <script type="text/javascript">
@@ -392,6 +394,8 @@ New js code:
          });
      </script>
  {% endblock %}
+{% endraw %}
+
 ```
 
 #### Bug 4
