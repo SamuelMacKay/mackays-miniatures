@@ -294,7 +294,7 @@ This is a sample of shots of what the site looks like on different devices.
 - link to profile page was not working on mobile, had not added the link to both desktop and mobile navbars
 
 Old code:
-```
+\```
               {% if request.user.is_superuser %}
                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                {% endif %}
@@ -303,10 +303,10 @@ Old code:
            {% else %}
                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
 
-```
+\```
 New code:
 
-```
+\```
               {% if request.user.is_superuser %}
                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                {% endif %}
@@ -315,13 +315,13 @@ New code:
            {% else %}
                <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
 
-```
+\```
 
 #### Bug 2
 - email information was not displaying correctly, I had forgotten to add the jinja database info to the email_confirmation_body.txt
 
 Old code:
-```
+\```
 Your order information is as below:
  
  Order Number: 
@@ -330,7 +330,7 @@ Your order information is as below:
  
  Order Total: £{{ order.order_total }}
  Delivery: £{{ order.delivery_cost }}
-```
+\```
 New code:
 
 ```
