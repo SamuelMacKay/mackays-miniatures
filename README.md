@@ -21,15 +21,15 @@ An account page will let the users save their details, delivery address and view
 
 |2| As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional |
 
-|3| As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable.|
+|3| As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Order's <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable.|
 
-|4| As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interctions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above.|
+|4| As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interactions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above.|
 
 |5| As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info every time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location auto fill. |
 
-|6| As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it.|
+|6| As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I don't have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it.|
 
-|7| As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should recieve <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner.|
+|7| As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should receive <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner.|
 
 |8| As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website.|
 
@@ -74,7 +74,7 @@ User Story Number 3,7 -  <br>
   - Links to all pages and is fixed to top
   - resizes for responsive mobile use
   - search bar to search for models
-  - account button that links to profile and (for admin) product managment
+  - account button that links to profile and (for admin) product management
   - account button changes to sign in/sign up button when not logged in
   - a banner to show how much you need to spend for free delivery
 
@@ -123,7 +123,7 @@ User Story Number 3,7 -  <br>
   - has a cost per model and a calculated total cost based on qty
   - can edit qty and remove any thing from the cart page
   - shows a warning sign for how far way from free shipping you are
-  - shows a warning sign if any product is pre orde with a tool tip attached
+  - shows a warning sign if any product is pre order with a tool tip attached
   - tells you current cost, delivery cost and adds it together for a grand total
   - cart icon on nav bar updates with current cost of cart
 
@@ -134,7 +134,7 @@ User Story Number 3,7 -  <br>
   - a form that will only accept valid info for shipping info
   - a list summary of models in cart and total cost
   - an option to save your currently input information to your profile
-  - a stripe secure payment method at will responsivly update to any errors
+  - a stripe secure payment method at will responsively update to any errors
   - a warning to say how much you will be charged
   - a quick back to cart button if you want to edit anything
   - the warning for pre order models will show here too
@@ -238,26 +238,26 @@ This is a sample of shots of what the site looks like on different devices.
     - order_history.html: No errors were returned when passing through the official W3C validator ![order_history validation](images/validator-profile-order-history.png) |<br>
 
 - CSS 
-    - base.css: No errors were returned when passing through offical Jigsaw validator ![base css](images/base-css-validator.png)|<br> 
-    - profile.css: No errors were returned when passing through offical Jigsaw validator ![profile css](images/profile.css.png)|<br> 
-    - checkout.css: No errors were returned when passing through offical Jigsaw validator ![checkout css](images/checkout-css-validator.png)|<br> 
+    - base.css: No errors were returned when passing through official Jigsaw validator ![base css](images/base-css-validator.png)|<br> 
+    - profile.css: No errors were returned when passing through official Jigsaw validator ![profile css](images/profile.css.png)|<br> 
+    - checkout.css: No errors were returned when passing through official Jigsaw validator ![checkout css](images/checkout-css-validator.png)|<br> 
 
 - JS 
-    - stripe_elements.js: No errors were returned when passing through offical JSHint validator ![stripe-elements-js-JSHINT](images/stripe-elements-JSHint.png)|<br> 
+    - stripe_elements.js: No errors were returned when passing through official JSHint validator ![stripe-elements-js-JSHINT](images/stripe-elements-JSHint.png)|<br> 
 
-    - countryfield.js: No errors were returned when passing through offical JSHint validator ![country-field-js](images/countryfield-jshint.png)|<br> 
+    - countryfield.js: No errors were returned when passing through official JSHint validator ![country-field-js](images/countryfield-jshint.png)|<br> 
     
-    - add_products.html built in js: No errors were returned when passing through offical JSHint validator ![add-products-html-inbuilt](images/add-products-html-inbuilt-js.png)|<br> 
+    - add_products.html built in js: No errors were returned when passing through official JSHint validator ![add-products-html-inbuilt](images/add-products-html-inbuilt-js.png)|<br> 
 
-    - edit_products.html built in js: No errors were returned when passing through offical JSHint validator ![edit-products-html-inbuilt](images/edit-products-html-inbuilt-js.png)|<br> 
+    - edit_products.html built in js: No errors were returned when passing through official JSHint validator ![edit-products-html-inbuilt](images/edit-products-html-inbuilt-js.png)|<br> 
 
-    - checkout_html built in js: No errors were returned when passing through offical JSHint validator ![checkout_html built in js](images/checkout-html-inbuilt-js.png)|<br> 
+    - checkout_html built in js: No errors were returned when passing through official JSHint validator ![checkout_html built in js](images/checkout-html-inbuilt-js.png)|<br> 
     
-    - bag_html built in js: No errors were returned when passing through offical JSHint validator ![bag_html built in js](images/bag-html-inbuilt-js.png)|<br> 
+    - bag_html built in js: No errors were returned when passing through official JSHint validator ![bag_html built in js](images/bag-html-inbuilt-js.png)|<br> 
 
-    - products_html built in js: No errors were returned when passing through offical JSHint validator ![products_html built in js](images/products-html-inbuilt-js.png)|<br> 
+    - products_html built in js: No errors were returned when passing through official JSHint validator ![products_html built in js](images/products-html-inbuilt-js.png)|<br> 
 
-    - quantity_input.js: No errors were returned when passing through offical JSHint validator ![quantity_input.js](images/quantity-input-script-jshint.png)|<br> 
+    - quantity_input.js: No errors were returned when passing through official JSHint validator ![quantity_input.js](images/quantity-input-script-jshint.png)|<br> 
 
 - Python
     - app.py:  No errors were returned when passing through CI Python Linter ![]()<br>
@@ -265,9 +265,9 @@ This is a sample of shots of what the site looks like on different devices.
 - Lighthouse
 
   ### NOTE:
-    - The light house is taking a score hit in best practices for cookie usage in a 3rd party programe that i do not have control over, as is the performance because of all the high quality images that are stored in AWS.
-    - I have have done all the imporvments with in my power to get the scores has high as possible
-    - some of the crispy forms used (I.E. For the country selector) do not come with a built in label, and i cannot fix that issue
+    - The light house is taking a score hit in best practices for cookie usage in a 3rd party programme that i do not have control over, as is the performance because of all the high quality images that are stored in AWS.
+    - I have have done all the improvements with in my power to get the scores has high as possible
+    - some of the crispy forms used (I.E. For the country selector) do not come with a built in label, which is tanking the accessability on some pages. and i cannot fix this issue
     
     - home.html: No errors were returned when passing through the Lighthouse validator ![home lighthouse](images/lighthouse-home.png)|<br> 
     - add_product.html: No errors were returned when passing through the Lighthouse validator ![add_product lighthouse](images/lighthouse-add-products.png)|<br> 
@@ -283,48 +283,177 @@ This is a sample of shots of what the site looks like on different devices.
     - order_history.html: No errors were returned when passing through the Lighthouse validator ![order_history lighthouse](images/lighthouse-order-history.png)|<br>
 
 ### Manual Testing
-- I have tested that this page works in different web browsers.
-- I have tested that the project is responsive and works with different device sizes. It looks good and functions as normal. 
+- I have tested that this page works in different web browsers by using chrome, safari and mozilla firefox on my computer and it is responsive on all platforms, looks consistent and no bugs with layouts or functions break.
+- I have tested that the project is responsive and works with different device sizes by using the 'inspect' tool and resizing to various different device sizes to make sure the lay outs remained functioning, readable and appealing. I also used my iPhone 16 on safari to check for any anomalies and  It looks good and functions as normal. 
 - I have tested all links, internal and external. They go to the correct destination and open in the correct way. 
 - I have tested that all text and fonts are readable and easy to understand.
 - I have asked my partner to use the website to see what a first time user would experience.
 
 ### Bugs
 #### Bug 1
-- 
+- link to profile page was not working on mobile, had not added the link to both desktop and mobile navbars
 
 Old code:
 ```
+              {% if request.user.is_superuser %}
+                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+               {% endif %}
+               <a href="" class="dropdown-item">My Profile</a>
+               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+           {% else %}
+               <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+
+```
+New code:
+
+```
+              {% if request.user.is_superuser %}
+                   <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+               {% endif %}
+               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+           {% else %}
+               <a href="{% url 'account_signup' %}" class="dropdown-item">Sign Up</a>
+
+```
+
+#### Bug 2
+- email information was not displaying correctly, I had forgotten to add the jinja database info to the email_confirmation_body.txt
+
+Old code:
+```
+Your order information is as below:
+ 
+ Order Number: 
+ Order Date: 
+ Phone: 
+ 
+ Order Total: £{{ order.order_total }}
+ Delivery: £{{ order.delivery_cost }}
+```
+New code:
+
+```
+Your order information is as below:
+ 
+ Order Number: {{ order.order_number}}
+ Order Date: {{ order.date }}
+ Phone: {{ order.phone_number }}
+ 
+ Order Total: £{{ order.order_total }}
+ Delivery: £{{ order.delivery_cost }}
+
+```
+
+#### Bug 3
+- Both edit and add forms were not displaying the set image correctly, added more for statements in the html and some js to get it function as intended,the same changes were made to both add_product.html and edit_product.html.
+
+Old html code:
+```
+<form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     {{ form | crispy }}
+```
+New html code:
+
+```
+<form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                     {% csrf_token %}
+                     {% for field in form %}
+                         {% if field.name != 'image' %}
+                             {{ field | as_crispy_field }}
+                         {% else %}
+                             {{ field }}
+                         {% endif %}
+                     {% endfor %}
+```
+
+
+New js code:
+
+```
+{% block postloadjs %}
+     {{ block.super }}
+     <script type="text/javascript">
+         $('#new-image').change(function(){
+             var file = $('#new-image')[0].files[0];
+             $('#filename').text(`Image will be set to: ${file.name}`);
+         });
+     </script>
+ {% endblock %}
+```
+
+#### Bug 4
+- heroku deployment wasn't working, and live emails were not sending, needed to fix the python version in the runtime.txt
+
+Old code:
+```
+ python-3.12.2
+ 
+```
+New code:
+
+```
+ 
+ python-3.9.19
+
+```  
+
+#### Bug 5
+- getting and error 500 message on sign in, caused by the default_full_name field not being a field in the UserProfile, changed it back to user and made the autofocus target default_phone_number
+
+Old code:
+```
+
+         self.fields['default_full_name'].widget.attrs['autofocus'] = True
 
 ```
 New code:
 
 ```
 
+         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
+
+```
+
+#### Bug 
+- I missed a typo on the confirm your order button
+Old code:
+```
+<a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-1">
+                         <span class="text-uppercase">Confrim your order</span>
+                     </a>
+
+```
+New code:
+
+```
+<a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-1">
+                         <span class="text-uppercase">Confirm your order</span>
+                     </a>
+
 ```
 
 ### Unfixed Bugs
- -
+ - Lighthouse performance and best practices have scored poorly from 3rd party programs that are required for the website to function, stripe uses cookies which i can not control but are considered bad practice and out of date now,
+
+
 
 ### User stories Testing
 |Story No.|Result|Story/ Evidence|
 | ------------- | ------------- | ------------- |
 |1|<font color="green">Test Pass</font> | <br> As The Site Owner, <br> I want to be users to be able to find what they are looking for with ease <br> So they will be more likely to buy from me <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, a gallery style product page and a sorting system. <br><br> Evidence: I have a universal and consistent nav bar on all pages, with a clean and simple design, a search engine that allows for targeted searches through the database and a sleek layout for all product pages to include images, pricing and the ability to add items to cart with 1 button click. <br> ![layout for navbar and gallery](images/evidence-story-1.png)|
-|2|<font color="green">Test Pass</font> | <br>  As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional.  <br><br> Evidence: I have installed and use a 3rd party programe for taking/managing payments securely called [Stripe](https://stripe.com/gb). <br><br> ![stripe checkout page](images/evidence-story-2.png)|
-|3|<font color="green">Test Pass</font> | <br> As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Orderes <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable. <br><br> Evidence: I have bright and high contrast banners on products that state if they are new or up for pre-order, with links that will bring you to their respective filtered search pages, also a warning in the cart if you have a pre-order item, that it will delay your delivery, as it will ship when they are released offically. <br><br>![pre order](images/evidence-preorder-story-3.png) ![new](images/evidence-new-story-3.png) ![checkout alert](images/evidence-warning-story-3.png)||
-|4|<font color="green">Test Pass</font> | <br> As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interctions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above. <br><br> Evidence: I have comprehensive toast system that will display relevent information and changes all in a unified and easy to see way that remains consistent in styling. <br><br> ![alert toast](images/evidence-alert-story-4.png) ![success toast](images/evidence-success-story-4.png) |
-|5|<font color="green">Test Pass</font> | <br> As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info every time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location auto fill. <br><br> Evidence: I have a user profile database, which links all purchases when logged in as that user to that account, and a profile page that allows a user to review past purchase reciepts, as well as storing the useres information to pre-fill all neccessary fields in the checkout step, to reduce inputs required to go from desire to purchase. <br><br> ![profile page](images/evidence-story-5.png)|
-|6|<font color="green">Test Pass</font> | <br> As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I dont have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it. <br> Evidence: I have a checkout page and a toast notification that has all information regarding the current cart total, and a link to add or remove products from the cart directly for the shopping cart display, which will automatically update the page and the cart with the new correct information. <br><br> ![bag page](images/evidence-story-6.png)|
-|7|<font color="green">Test Pass</font> | <br> As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should recieve <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner. <br> Evidence: I have an automated system that will send and invoice reciept to the users valid email address (which is a mandatory field) and will autofill if you are logged in. There is also a reciept displayed onscreen directly on the website if the email is lost, or the address was incorrect/not active. <br><br> ![on website reciept](images/evidence-reciept-story-7.png) ![success toast](images/evidence-alert-story-7.png) ![email](images/evidence-email-story-7.png)|
-|8|<font color="green">Test Pass</font> | <br> As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website. <br> Evidence: i have both a backend and frontend editing capabilites that are tied to admin status, which can only be activated in the back end, so regular customers can not edit or modify other users, product information or prices or weather they have admin or staff power. <br><br> ![edit/delete buttons](images/evidence-addordelete-story-8.png) ![add/edit frontend](images/evidence-CRUD-story-8.png) ![add/edit backend](images/evidence-backend-story-8.png) ![admin/staff status backend](images/evidence-admin-story-8.png) |
+|2|<font color="green">Test Pass</font> | <br>  As the Site Owner, <br> I want to have a site that has secure payment methods <br> So first time and repeat buyers feel comfortable purchasing from me, <br><br> I know I am done when I have a secure payment method that is reliable and looks professional.  <br><br> Evidence: I have installed and use a 3rd party programme for taking/managing payments securely called [Stripe](https://stripe.com/gb). <br><br> ![stripe checkout page](images/evidence-story-2.png)|
+|3|<font color="green">Test Pass</font> | <br> As the Site Owner, <br> I want to have an easily identifiable notification on all New Releases and Pre Orders <br> So potential customers can see what is the newest products and be excited by them <br><br> I know I am done when I have an icon that stands out and identifies the specific product as New or Pre-orderable. <br><br> Evidence: I have bright and high contrast banners on products that state if they are new or up for pre-order, with links that will bring you to their respective filtered search pages, also a warning in the cart if you have a pre-order item, that it will delay your delivery, as it will ship when they are released officially. <br><br>![pre order](images/evidence-preorder-story-3.png) ![new](images/evidence-new-story-3.png) ![checkout alert](images/evidence-warning-story-3.png)||
+|4|<font color="green">Test Pass</font> | <br> As A Site user, <br> I want to have a highly understandable way of seeing the effects of my interactions with the site when registering an account, logging in, adding items to my cart, ETC. <br> So I am informed of any information that needs to be presented. <br><br> I know I am done when I have a notification system that will show any information like the above. <br><br> Evidence: I have comprehensive toast system that will display relevant information and changes all in a unified and easy to see way that remains consistent in styling. <br><br> ![alert toast](images/evidence-alert-story-4.png) ![success toast](images/evidence-success-story-4.png) |
+|5|<font color="green">Test Pass</font> | <br> As A returning Customer , <br> I want to be able to see my previous purchases, save my delivery and payment details <br> So I can buy from the provider again with ease and without adding in all the info every time.  <br><br> I know I am done when I have an account system that when logged in will save the delivery address location auto fill. <br><br> Evidence: I have a user profile database, which links all purchases when logged in as that user to that account, and a profile page that allows a user to review past purchase receipts, as well as storing the users information to pre-fill all necessary fields in the checkout step, to reduce inputs required to go from desire to purchase. <br><br> ![profile page](images/evidence-story-5.png)|
+|6|<font color="green">Test Pass</font> | <br> As A potential buyer , <br> I want to be able to see whats in my shopping cart and be able to edit them, remove them or increase how many i want <br> So I don't have to navigate away from the buy page to edit what im buying <br><br> I know I am done when i have a page for displaying shopping bag contents and lets me edit what is in it. <br> Evidence: I have a checkout page and a toast notification that has all information regarding the current cart total, and a link to add or remove products from the cart directly for the shopping cart display, which will automatically update the page and the cart with the new correct information. <br><br> ![bag page](images/evidence-story-6.png)|
+|7|<font color="green">Test Pass</font> | <br> As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should receive <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner. <br> Evidence: I have an automated system that will send and invoice receipt to the users valid email address (which is a mandatory field) and will autofill if you are logged in. There is also a receipt displayed onscreen directly on the website if the email is lost, or the address was incorrect/not active. <br><br> ![on website receipt](images/evidence-reciept-story-7.png) ![success toast](images/evidence-alert-story-7.png) ![email](images/evidence-email-story-7.png)|
+|8|<font color="green">Test Pass</font> | <br> As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website. <br> Evidence: i have both a backend and frontend editing capabilities that are tied to admin status, which can only be activated in the back end, so regular customers can not edit or modify other users, product information or prices or weather they have admin or staff power. <br><br> ![edit/delete buttons](images/evidence-addordelete-story-8.png) ![add/edit frontend](images/evidence-CRUD-story-8.png) ![add/edit backend](images/evidence-backend-story-8.png) ![admin/staff status backend](images/evidence-admin-story-8.png) |
 
 ### Accessibility Testing
 
 To check the colors and fonts, I used Lighthouse in the Google devtools. The results are shown below:
-
-| Home  |
-| ------- |
-| ![lighthouse result home page]() |
 
 ## Deployment
 
@@ -350,7 +479,7 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 4. Above the list of files click the button that says 'Gitpod'.
 
 ### Remote Deployment 
- The prgoram was deployed to Heroku. If you have forked/cloned the repository the steps to deploy are:
+ The program was deployed to Heroku. If you have forked/cloned the repository the steps to deploy are:
  1. On Heroku, create a new app.
  2. input a name for your app
  3. Click on the settings tab
@@ -372,7 +501,7 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 - HTML, CSS and Javascript code help was taken from w3schools - [W3Schools](https://www.w3schools.com/)
 
 ### Media
-- Images are place holders but are taken from the site: [Warhammer](https://www.warhammer.com/en-GB/home) WOULD HAVE TO USE OWN IMAGES OR GET PERMISSION FROM GW AS AN OFFICAL RETAILER
+- Images are place holders but are taken from the site: [Warhammer](https://www.warhammer.com/en-GB/home) WOULD HAVE TO USE OWN IMAGES OR GET PERMISSION FROM GW AS AN OFFICIAL RETAILER
 
 #### Icons
 - All page Icons - [Font Awesome](https://fontawesome.com/)
