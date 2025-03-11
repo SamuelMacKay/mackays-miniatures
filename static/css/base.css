@@ -454,3 +454,9 @@ input[name='q']::placeholder P{
         font-size: 0.99rem;
     }
 }
+
+@media (max-width: 375px) {
+    #hide-on-sm {
+       display: none;
+    }
+}

@@ -31,7 +31,7 @@
                 <div class="text-center">
                     <div><i class="fas fa-user fa-lg"></i></div>
                     {% if request.user.is_authenticated %}
-                    <p class="my-0">My Account <small>({{ user.username }})</small></p>
+                    <p class="my-0">My Account <small id="hide-on-sm">({{ user.username }})</small></p>
                     <p class="my-0 font-size-small"></p>
                     {% else %}
                     <p class="my-0">Sign Up/Log in</p>

@@ -284,10 +284,10 @@ This is a sample of shots of what the site looks like on different devices.
 
 ### Manual Testing
 - I have tested that this page works in different web browsers by using chrome, safari and mozilla firefox on my computer and it is responsive on all platforms, looks consistent and no bugs with layouts or functions break.
-- I have tested that the project is responsive and works with different device sizes by using the 'inspect' tool and resizing to various different device sizes to make sure the lay outs remained functioning, readable and appealing. I also used my iPhone 16 on safari to check for any anomalies and  It looks good and functions as normal. 
-- I have tested all links, internal and external. They go to the correct destination and open in the correct way. 
-- I have tested that all text and fonts are readable and easy to understand.
-- I have asked my partner to use the website to see what a first time user would experience.
+- I have tested that the project is responsive and works with different device sizes by using the 'inspect' tool and resizing to various different device sizes to make sure the lay outs remained functioning, readable and appealing. I also used my iPhone 16 on safari to check for any anomalies and i found the shipping threshold banner was looking a little goofy. so after adding a media query It looks good and functions as normal. 
+- I have tested all links, internal and external. I found I had missed a href for the mobile profile link, so the profile page wasn't working on mobile devices, after i fixed that They now all go to the correct destination and open in the correct way. 
+- I have tested that all text and fonts are readable and easy to understand, along with color choices. I used a contrast checker website [contrast checker](https://webaim.org/resources/contrastchecker/) to find viable colors and used the lighthouse feature in the inspect tool to check it all worked out. I have also used a clean common font so it is usable on all, new and old, devices.
+- I have asked my partner to use the website to see what a first time user would experience. She checked around the website to see how intuitive it was, how easy it was to understand and create an account, make a purchase and that it all worked well from a new pair of eyes.
 
 ### Bugs
 #### Bug 1
@@ -416,7 +416,7 @@ New code:
 
 ```
 
-#### Bug 
+#### Bug 6
 - I missed a typo on the confirm your order button
 Old code:
 ```
@@ -431,6 +431,44 @@ New code:
 <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-1">
                          <span class="text-uppercase">Confirm your order</span>
                      </a>
+
+```
+
+#### Bug 7
+- Had a sizing issue with the shipping threshold banner on devices smaller than 425px. added a media query to adjust it. found on my 1Phone
+
+New code:
+```
+@media (max-width: 425px) {
+    #shipping-threshold {
+        font-size: 0.99rem;
+    }
+}
+```
+
+#### Bug 8
+- mobile navbar was displaying wrong on devices smaller than
+Old code:
+```
+                    <p class="my-0">My Account <small>({{ user.username }})</small></p>
+
+                     </a>
+
+```
+New code:
+
+```
+                    <p class="my-0">My Account <small id="hide-on-sm">({{ user.username }})</small></p>
+
+
+```
+```
+@media (max-width: 375px) {
+    #hide-on-sm {
+       display: none;
+    }
+}
+
 
 ```
 
