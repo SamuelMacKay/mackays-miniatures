@@ -8,15 +8,14 @@ from .models import Product, Faction
 class ProductForm(forms.ModelForm):
     """ form for displaying product information """
 
-
     class Meta:
         """ gets all fields from Product model """
         model = Product
         fields = '__all__'
 
-
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-
+    image = forms.ImageField(
+        label='Image', required=False, widget=CustomClearableFileInput
+        )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

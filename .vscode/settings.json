@@ -34,6 +34,7 @@
       "endautoescape",
       "endblocktrans",
       "endfor",
+      "endraw",
       "herokuapp",
       "lineitem",
       "lineitems",

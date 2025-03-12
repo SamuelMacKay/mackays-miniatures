@@ -4,6 +4,7 @@ from django.contrib import admin
 from .models import Product, Faction, UnitType
 # Register your models here.
 
+
 class ProductAdmin(admin.ModelAdmin):
     """ details for each product in store """
     list_display = (

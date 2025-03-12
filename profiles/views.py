@@ -9,7 +9,6 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 
-
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -19,9 +18,15 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Default Profile information has been successfully updated!')
+            messages.success(
+                request,
+                'Default Profile information has been successfully updated!'
+                )
         else:
-            messages.error(request, 'Update failed, Please ensure form is valid, and try again!')
+            messages.error(
+                request,
+                'Update failed, Please ensure form is valid, and try again!'
+                )
 
     else:
         form = UserProfileForm(instance=profile)
