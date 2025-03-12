@@ -4,7 +4,7 @@ The website will have an easy navigate navbar, and search engine so you can find
 An account page will let the users save their details, delivery address and view their previous purchases.
 
 
-![Responsive Mockup](media/responsive-mockup.png)
+![Responsive Mockup](images/responsive-mockup.png)
 
 2. [User Stories](#user-stories)
 3. [Wire Frames](#wireframes)
@@ -252,8 +252,43 @@ This is a sample of shots of what the site looks like on different devices.
 
     - quantity_input.js: No errors were returned when passing through official JSHint validator ![quantity_input.js](images/quantity-input-script-jshint.png)|<br> 
 
-- Python
-    - app.py:  No errors were returned when passing through CI Python Linter ![]()<br>
+- ### Python
+    - #### Bag:
+        - apps.py:  No errors were returned when passing through CI Python Linter ![](images/lint-bag-apps-py.png)<br>
+        - contexts.py:  No errors were returned when passing through CI Python Linter ![](images/lint-bag-contexts.png)<br>
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-bag-urls.png)<br>
+        - views.py:  No errors were returned when passing through CI Python Linter ![](images/lint-bag-views.png)<br>
+    - #### Checkout:
+        - admin.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-admin.png)<br>
+        - apps.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-apps.png)<br>
+        - forms.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-forms.png)<br>
+        - models.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-models.py.png)<br>
+        - signals.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-signals.png)<br>
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-urls.png)<br>
+        - views.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-views.png)<br>
+        - webhook_handler.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-webhook-handler.png)<br>
+        - webhooks.py:  No errors were returned when passing through CI Python Linter ![](images/lint-checkout-webhooks.png)<br>
+    - #### Home:
+        - apps.py:  No errors were returned when passing through CI Python Linter ![](images/lint-home-apps.png)<br>
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-home-urls.png)<br>
+        - views.py:  No errors were returned when passing through CI Python Linter ![](images/lint-home-views.png)<br>
+    - #### Products:
+        - apps.py:  No errors were returned when passing through CI Python Linter ![](images/lint-product-apps.png)<br>
+        - admin.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-admin.png)<br>
+        - forms.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-forms.png)<br>
+        - models.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-models.png)<br>
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-urls.png)<br>
+        - views.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-views.png)<br>
+        - widgets.py:  No errors were returned when passing through CI Python Linter ![](images/lint-products-widgets.png)<br>
+    - #### Profiles:
+        - apps.py:  No errors were returned when passing through CI Python Linter ![](images/lint-profiles-apps.png)<br>
+        - forms.py:  No errors were returned when passing through CI Python Linter ![](images/lint-profiles-forms.png)<br>
+        - models.py:  No errors were returned when passing through CI Python Linter ![](images/lint-profiles-models.png)<br>
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-profiles-urls.png)<br>
+        - views.py:  No errors were returned when passing through CI Python Linter ![](images/lint-profiles-views.png)<br>
+    - #### Project Level:
+        - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-project-urls.png)<br>
+               
 
 - Lighthouse
 
