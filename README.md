@@ -160,6 +160,9 @@ User Story Number 3,7 -  <br>
 
 ## Testing
 
+### Manual Testing:
+[<< To TESTING.md](TESTING.md)
+
 This is a sample of shots of what the site looks like on different devices. 
 
 #### Desktop
