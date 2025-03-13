@@ -33,8 +33,8 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     unit_type = models.ForeignKey(
-        'UnitType', null=True, blank=True,
-        on_delete=models.SET_NULL
+        'UnitType',
+        on_delete=models.PROTECT,
         )
     setting = models.CharField(max_length=254, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
