@@ -5,7 +5,7 @@
 
 ### Index
 |Test #|Test|Results|Evidence|
-| --- | --- | --- |--- |
+| --- | --- | --- | --- |
 |1| NavBar resizes on smaller screen sizes |Pass| The Navbar changes from to a mobile friendly version when smaller than 991px
 ![Desktop Nav](images/testing-nav.png)<br>
 ![Mobile Nav](images/testing-mobile-nav.png) |
@@ -23,7 +23,7 @@
 
 ### Products
 |Test #|Test|Results|Evidence|
-| --- | --- | --- |--- |
+| --- | --- | --- | --- |
 |1| Sort by drop down reorganizes product display order based on option clicked |Pass| each option works when clicked and reforms the products
 ![Sorting](images/testing-sorting.png)|
 |2| Product layout displays 1,2,3 or 4 in a row on small, medium, large and xlarge |Pass| layout resizes responsively when on mobile, tablet or desktop 
@@ -46,13 +46,45 @@
 
 ### Add Products
 |Test #|Test|Results|Evidence|
-| --- | --- | --- |--- |
-|1| |Pass|  |
+| --- | --- | --- | --- |
+|1| A drop down with all possible faction options to select, and starts filled in, so it cannot be set to empty |Pass|  checked by clicking the drop down and adding a new test faction that shows up, and is removed when deleted
+![faction dropdown](images/testing-faction.png) |
+|2| Two options to flag the product as new or pre-order |Pass| checked by clicking them, can be added to the same product at the same time, and will add them to the pre order/new filters on the product page
+![New/PreOrder](images/testing-boolean.png) |
+|3| is a mandatory input, and has an unlimited amount of max characters for the longer, more detailed descriptions |Pass| checked by attempting to add a product with out it, and then adding lorem ipsum for an unrealistic length, it also has a * for ux  
+![Description](images/testing-description.png) |
+|4| is not mandatory and will auto set a default image if one is not chosen |Pass| tested by adding a product with no image |
+|5| Select image button opens local image folder for manual image upload |Pass| Checked by clicking on it, and selected image is then uploaded to AWS database and used as the product image |
+![Image Upload](images/testing-image-upload.png) |
+|6| Cancel links to product page |Pass| Links were checked by clicking on them |
+|7| Add product updates the product database with the new entry |Pass| Links were checked by clicking on them 
+![Add product or go back](images/testing-links.png) |
+|8| Is mandatory to have something in here |Pass| checked by adding product with out a name and it flagged this field as necessary, it also has a * for ux
+![product name](images/testing-name.png) |
+|9| Is a mandatory field, and only accepts numerical inputs |Pass| Checked by typing in the field and adding non-numerical characters, it also has a * for ux 
+|10| Only allows whole numbers, or up to 2 decimal places |Pass| throws a validation alert that you have too many decimals, and will still display 2 decimal places on the product if only a full number is input |
+![product price](images/testing-price.png) |
+|11| A manual input for the models setting, is mandatory |Pass| Checked by adding product with out it and it flagged the field. Scope to add a drop down option for setting like unit type or faction
+![product setting](images/testing-setting.png) |
+|12| A manual input to assign an SKU number to a product, Cannot be left blank |Pass| checked by trying to add with out it, and it flags the field as mandatory. Scope to have the SKU number be auto generated based on product faction, setting and unit type
+![product SKU](images/testing-sku.png) |
+|13| A drop down with all unit type options available to select |Pass| Checked by clicking on them |
+|14| Is it a mandatory field that only allows the list of unit types to be used? |Pass| it was allowing a blank input, which would set it to None on the product page, i removed the null and blank being set to true, now attempting to add without changing it from the ------- default flags the field as needing an input 
+![product unit type](images/testing-unit-dropdown.png) |
 
 ### Edit Products
 |Test #|Test|Results|Evidence|
-| --- | --- | --- |--- |
-|1| |Pass|  |
+| --- | --- | --- | --- |
+|1| set image is not mandatory and will auto set a default image if one is not chosen |Pass| tested by adding a product with no image |
+|2| Select image button opens local image folder for manual image upload |Pass| Checked by clicking on it, and selected image is then uploaded to AWS database and used as the product image |
+|3| Displays current set image as a small preview |Pass| Checked by changing the image and it updates when returning to that edit page 
+![Image Upload](images/testing-current-image.png) |
+|4| Cancel links to product page |Pass| Links were checked by clicking on them |
+|5| Update product updates the product database with the new information |Pass| Links were checked by clicking on them 
+![Update or go back](images/testing-update-product.png) |
+|6| Form auto fills with selected products information |Pass| checked by opening different products to edit |
+|7| All other features of the form are identical to the add product age |Pass| all validations remain the same when comparing the two
+![Edit form](images/testing-edit-form.png) |
 
 ### Product Details
 |Test #|Test|Results|Evidence|
