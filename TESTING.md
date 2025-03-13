@@ -77,19 +77,50 @@
 ### Sign up
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Link to Log in Page at the top of form |Pass| Links were checked by clicking on them 
+![Log in link](images/testing-login-link.png) |
+|2| A form that needs to be valid to be passed through and allow you to sign up |Pass| all validation violations are explained and working as intended, was tested by trying all wrong ways to create an account 
+![Sign up form](images/testing-signup-form.png)|
+|3| sign up button sends a confirmation email to the valid email address to confirm sign up |Pass| Links were checked by clicking on them, validation email arrives very quickly 
+![Sign up button](images/testing-signup-button.png) |
 
 ### Log in
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Link to sign up page at the top of form |Pass| Links were checked by clicking on them 
+![Link to sign up](images/testing-signup-link.png) |
+|2| verifies a valid log in attempt, if the user name exists and if password is correct |Pass| Link was checked by clicking log in, also shows error message if username or password was incorrect, but for security doesn't specify which is incorrect
+![Log in](images/testing-login-button.png) |
+|3| Forgot Password link to a reset password page |Pass| Link was checked by clicking them
+![Log in](images/testing-login-button.png) |
+|4| Log in form that only accepts accurate log in attempts with users that are verified and exist |Pass| failed attempts will bring you back to the log in page, with notification saying username or password was incorrect
+![Incorrect login attempt](images/testing-incorrect-login.png)
+![Log in form](images/testing-login-form.png) |
+|5| Reset password form validates a valid email address |Pass| only sends an email if the email address follows a regular email address pattern 
+![reset validation](images/testing-reset-validate.png) |
+|6| Link back to Log in page |Pass| Links were checked by clicking them |
+![back to login](images/testing-btl.png)
+|7| If valid email address, will send a reset password link to that email address |Pass| Links were checked by clicking them |
+![back to login](images/testing-btl.png)
+
 
 ### Profile
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| The user profile form will store the information to be used for checkout |Pass| checked by getting to checkout step, all given info auto fills in that form, and will update if it is changed at the profile page
+![Info](images/testing-profile-info.png) |
+|2| links to a receipt page for that order |Pass|  links were checked by clicking them
+![order history link](images/testing-order-history-link.png) |
+|3| Shows all previous orders from most recent |Pass| checked by making a complete order, and it updated with a new order line
+![order history](images/testing-order-history.png) |
+
 
 ### Order History
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Displays all given information from the order, if the user was authenticated and logged in when they completed the purchase |Pass|  
+![order receipt](images/testing-order-receipt.png) |
+|2| Links back to the profile page |Pass| links were checked by clicking on them
+![return to profile](images/testing-return-to-profile.png) |
+|3| a pop up toast will appear to inform the user they are looking at an old/past order receipt |Pass| checked by clicking link, and saw it popped up when the page loaded 
+![Alert](images/testing-alert-notification.png) |
