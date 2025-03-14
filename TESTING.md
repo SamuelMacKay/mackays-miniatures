@@ -121,7 +121,22 @@
 ### Checkout
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Displays all current products in cart, as well as their cost, there combined cost(if multiple), the delivery cost and the grand total |Pass| checked by adding different products, multiples, less than shipping threshold and more than shipping threshold.
+![](images/testing-checkout-cart-summary.png) |
+|1| A form that auto completes with authenticated users information from their profile |Pass| checked by changing the profile information and then returning to checkout. Only the User name must be added manually |
+|1| If non-authenticated user checks out, the form will be blank and then will inform you of each required field in the form validation fails |Pass| Checked by checking out while not logged in. Form fields that are required are flagged with a notification if the fail the validation step and inform the user 
+![](images/testing-checkout-form.png) |
+|1| |Pass| 
+![](images/testing-checkout-links.png) |
+|1| Save info only Shows up when user is authenticated |Pass| checked by being logged in and out at this stage. |
+|1| When checked, will overwrite your profile info with what ever has been filled out in the form |Pass| checked by making a new user with no saved info, and checking out with this box checked 
+![](images/testing-checkout-save-info.png) |
+|1| If user is not authenticated, a call to sign up or login to save your info will show up |Pass| checked by being logged in and logged out at this stage
+![](images/testing-checkout-non-auth.png) |
+|1| Adjust cart button links back to the cart page |Pass| links were checked by clicking on them |
+|1| complete order will validate form is valid, card info is valid, and then attempt to take payment via a secure payment method (STRIPE) |Pass| Checked by filling out the form incorrectly at each field, fixing each one until it was working. payment is taken and order is created in the backend only when everything validates and is fine. links were checked by clicking on them |
+|1| Bright red text informing you how much your card will be charged shows up under the complete order button |Pass| checked by Comparing to the grandtotal of the cart
+![](images/testing-checkout-stripe.png) |
 
 ### Checkout Success
 |Test #|Test|Results|Evidence|
