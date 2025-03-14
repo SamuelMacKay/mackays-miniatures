@@ -90,58 +90,66 @@
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
 |1| An edit(links to edit_product page) or delete button that only shows up for admin |Pass| Checked by being a non-super user and not signed in and it wasn't there. Links were checked by clicking on them
-![](images/testing-product-details-CRUD.png) |
-|1| A link that sends you to a filtered product page for that faction |Pass| Links were checked by clicking on them
-![](images/testing-product-details-faction-link.png) |
-|1| Link to a new tab with the URL and of the picture |Pass| Links were checked by clicking on them, correctly opens new tab, rather than redirecting current page
-![](images/testing-product-details-image.png) |
-|1| + and - adds/reduces the number shown, and when add to bag is clicked, it adds that amount to the cart |Pass| Buttons were checked by clicking on them, the total shown in the top right corner responsively updates to that information |
-|1| Keep shopping button Links back to the product page |Pass| Links were checked by clicking them 
-![](images/testing-product-details-quantity.png) |
+![product details CRUD](images/testing-product-details-CRUD.png) |
+|2| A link that sends you to a filtered product page for that faction |Pass| Links were checked by clicking on them
+![Faction link](images/testing-product-details-faction-link.png) |
+|3| Link to a new tab with the URL and of the picture |Pass| Links were checked by clicking on them, correctly opens new tab, rather than redirecting current page
+![Image](images/testing-product-details-image.png) |
+|4| + and - adds/reduces the number shown, and when add to bag is clicked, it adds that amount to the cart |Pass| Buttons were checked by clicking on them, the total shown in the top right corner responsively updates to that information |
+|5| Keep shopping button Links back to the product page |Pass| Links were checked by clicking them 
+![add to cart](images/testing-product-details-quantity.png) |
 
 ### Cart
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
 |1| Displays image of the associated product |Pass| checked by adding multiple different items to cart 
 ![Cart image](images/testing-cart-image.png) |
-|1| A Keep shopping button that links back to the product page |Pass| Links were checked by clicking on them |
-|1| Secure checkout button links to a Checkout page |Pass| Links were checked by clicking on them, displays a lock to imply security for UX
+|2| A Keep shopping button that links back to the product page |Pass| Links were checked by clicking on them |
+|3| Secure checkout button links to a Checkout page |Pass| Links were checked by clicking on them, displays a lock to imply security for UX
 ![Cart links](images/testing-checkout-button.png) |
-|1| If your cart is empty, a line saying it is empty and a keep shopping button will appear |Pass| checked by going to cart with no items added, and then adding 1 product and returning. Also deleting the last product in your cart will also bring this up.
+|4| If your cart is empty, a line saying it is empty and a keep shopping button will appear |Pass| checked by going to cart with no items added, and then adding 1 product and returning. Also deleting the last product in your cart will also bring this up.
 ![Empty cart](images/testing-empty-cart.png) |
-|1| A total cost sum that passes a % based delivery cost |Pass| checked by adding less than the free shipping threshold to cart |
-|1| A bright banner will appear to inform you how far off of free shipping you are, and disappears when you reach the threshold |Pass| Checked by having less than, and then more than the threshold in the cart |
-|1| Grand total is calculated automatically based on all products in cart, and current shipping fee, if there is one |Pass| checked by manually adding up the cost to compare it to the final result shown
+|5| A total cost sum that passes a % based delivery cost |Pass| checked by adding less than the free shipping threshold to cart |
+|6| A bright banner will appear to inform you how far off of free shipping you are, and disappears when you reach the threshold |Pass| Checked by having less than, and then more than the threshold in the cart |
+|7| Grand total is calculated automatically based on all products in cart, and current shipping fee, if there is one |Pass| checked by manually adding up the cost to compare it to the final result shown
 ![cart cost](images/testing-grand-total.png) |
-|1| A list of all the product info is displayed in an easy to read layout |Pass| checked by adding different products and checking they all line up to their product image
+|8| A list of all the product info is displayed in an easy to read layout |Pass| checked by adding different products and checking they all line up to their product image
 ![product info](images/testing-product-details.png) |
-|1| Allows for quick editing of the cart if the user changes their mind, can add, reduce or remove products entirely with out having to navigate away from the cart page |Pass| links were checked by clicking on them 
+|9| Allows for quick editing of the cart if the user changes their mind, can add, reduce or remove products entirely with out having to navigate away from the cart page |Pass| links were checked by clicking on them 
 ![adjust cart](images/testing-product-info-cart.png) |
 
 ### Checkout
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
 |1| Displays all current products in cart, as well as their cost, there combined cost(if multiple), the delivery cost and the grand total |Pass| checked by adding different products, multiples, less than shipping threshold and more than shipping threshold.
-![](images/testing-checkout-cart-summary.png) |
-|1| A form that auto completes with authenticated users information from their profile |Pass| checked by changing the profile information and then returning to checkout. Only the User name must be added manually |
-|1| If non-authenticated user checks out, the form will be blank and then will inform you of each required field in the form validation fails |Pass| Checked by checking out while not logged in. Form fields that are required are flagged with a notification if the fail the validation step and inform the user 
-![](images/testing-checkout-form.png) |
-|1| |Pass| 
-![](images/testing-checkout-links.png) |
-|1| Save info only Shows up when user is authenticated |Pass| checked by being logged in and out at this stage. |
-|1| When checked, will overwrite your profile info with what ever has been filled out in the form |Pass| checked by making a new user with no saved info, and checking out with this box checked 
-![](images/testing-checkout-save-info.png) |
-|1| If user is not authenticated, a call to sign up or login to save your info will show up |Pass| checked by being logged in and logged out at this stage
-![](images/testing-checkout-non-auth.png) |
-|1| Adjust cart button links back to the cart page |Pass| links were checked by clicking on them |
-|1| complete order will validate form is valid, card info is valid, and then attempt to take payment via a secure payment method (STRIPE) |Pass| Checked by filling out the form incorrectly at each field, fixing each one until it was working. payment is taken and order is created in the backend only when everything validates and is fine. links were checked by clicking on them |
-|1| Bright red text informing you how much your card will be charged shows up under the complete order button |Pass| checked by Comparing to the grandtotal of the cart
-![](images/testing-checkout-stripe.png) |
+![Cart summary](images/testing-checkout-cart-summary.png) |
+|2| A form that auto completes with authenticated users information from their profile |Pass| checked by changing the profile information and then returning to checkout. Only the User name must be added manually |
+|3| If non-authenticated user checks out, the form will be blank and then will inform you of each required field in the form validation fails |Pass| Checked by checking out while not logged in. Form fields that are required are flagged with a notification if the fail the validation step and inform the user 
+![checkout form](images/testing-checkout-form.png) |
+|4| Bright red text informing you how much your card will be charged shows up under the complete order button |Pass| checked by Comparing to the grandtotal of the cart |
+|5| Adjust cart button links back to the cart page |Pass| links were checked by clicking on them 
+![Checkout Links](images/testing-checkout-links.png) |
+|6| Save info only Shows up when user is authenticated |Pass| checked by being logged in and out at this stage. |
+|7| When checked, will overwrite your profile info with what ever has been filled out in the form |Pass| checked by making a new user with no saved info, and checking out with this box checked 
+![Save Info](images/testing-checkout-save-info.png) |
+|8| If user is not authenticated, a call to sign up or login to save your info will show up |Pass| checked by being logged in and logged out at this stage |
+|9| Links to login/sign up page |Pass| Links were checked by clicking on them
+![Login/Sign up](images/testing-checkout-non-auth.png) |
+|10| complete order will validate form is valid, card info is valid, and then attempt to take payment via a secure payment method (STRIPE) |Pass| Checked by filling out the form incorrectly at each field, fixing each one until it was working. payment is taken and order is created in the backend only when everything validates and is fine. links were checked by clicking on them |
+![checkout links](images/testing-checkout-links.png) |
+![stripe](images/testing-checkout-stripe.png) |
 
 ### Checkout Success
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Displays a receipt on the screen with all relevant order information |Pass| checked by placing an order |
+|2| see whats new button links to pre order page  |Pass| Links were checked by clicking them
+![receipt](images/testing-checkout-receipt.png) |
+|3| A notification pops up when successfully paid, with order number |Pass| checked by placing an order 
+![checkout success](images/testing-checkout-success.png) |
+|4| A confirmation email is sent to the email address used during the checkout step |Pass| Checked by placing a an order, corrected typo's found in the message 
+![email confirmation](images/testing-email-confirmation.png) |
+
 
 ### Sign up
 |Test #|Test|Results|Evidence|
