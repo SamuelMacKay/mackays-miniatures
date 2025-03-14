@@ -89,12 +89,34 @@
 ### Product Details
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| An edit(links to edit_product page) or delete button that only shows up for admin |Pass| Checked by being a non-super user and not signed in and it wasn't there. Links were checked by clicking on them
+![](images/testing-product-details-CRUD.png) |
+|1| A link that sends you to a filtered product page for that faction |Pass| Links were checked by clicking on them
+![](images/testing-product-details-faction-link.png) |
+|1| Link to a new tab with the URL and of the picture |Pass| Links were checked by clicking on them, correctly opens new tab, rather than redirecting current page
+![](images/testing-product-details-image.png) |
+|1| + and - adds/reduces the number shown, and when add to bag is clicked, it adds that amount to the cart |Pass| Buttons were checked by clicking on them, the total shown in the top right corner responsively updates to that information |
+|1| Keep shopping button Links back to the product page |Pass| Links were checked by clicking them 
+![](images/testing-product-details-quantity.png) |
 
 ### Cart
 |Test #|Test|Results|Evidence|
 | --- | --- | --- |--- |
-|1| |Pass|  |
+|1| Displays image of the associated product |Pass| checked by adding multiple different items to cart 
+![Cart image](images/testing-cart-image.png) |
+|1| A Keep shopping button that links back to the product page |Pass| Links were checked by clicking on them |
+|1| Secure checkout button links to a Checkout page |Pass| Links were checked by clicking on them, displays a lock to imply security for UX
+![Cart links](images/testing-checkout-button.png) |
+|1| If your cart is empty, a line saying it is empty and a keep shopping button will appear |Pass| checked by going to cart with no items added, and then adding 1 product and returning. Also deleting the last product in your cart will also bring this up.
+![Empty cart](images/testing-empty-cart.png) |
+|1| A total cost sum that passes a % based delivery cost |Pass| checked by adding less than the free shipping threshold to cart |
+|1| A bright banner will appear to inform you how far off of free shipping you are, and disappears when you reach the threshold |Pass| Checked by having less than, and then more than the threshold in the cart |
+|1| Grand total is calculated automatically based on all products in cart, and current shipping fee, if there is one |Pass| checked by manually adding up the cost to compare it to the final result shown
+![cart cost](images/testing-grand-total.png) |
+|1| A list of all the product info is displayed in an easy to read layout |Pass| checked by adding different products and checking they all line up to their product image
+![product info](images/testing-product-details.png) |
+|1| Allows for quick editing of the cart if the user changes their mind, can add, reduce or remove products entirely with out having to navigate away from the cart page |Pass| links were checked by clicking on them 
+![adjust cart](images/testing-product-info-cart.png) |
 
 ### Checkout
 |Test #|Test|Results|Evidence|
