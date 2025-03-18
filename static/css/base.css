@@ -449,7 +449,7 @@ input[name='q']::placeholder P{
     font-size: 1.8rem;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 556px) {
     #shipping-threshold {
         font-size: 0.99rem;
     }
