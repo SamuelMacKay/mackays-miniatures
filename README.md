@@ -6,11 +6,22 @@ An account page will let the users save their details, delivery address and view
 
 ![Responsive Mockup](images/responsive-mockup.png)
 
-2. [User Stories](#user-stories)
+1. [User Stories](#user-stories)
+2. [ERD](#erd)
 3. [Wire Frames](#wireframes)
 4. [Features](#features)
+   - [Existing Features](#existing-features)
+   - [Features Left to Implement](#features-left-to-implement)
 5. [Testing](#testing)
+   - [Manual](#manual-testing)
+   - [Responsiveness](#responsiveness)
+   - [Validator Testing](#validator-testing)
+   - [Python](#python)
+   - [Lighthouse](#lighthouse)
 6. [Bugs](#bugs)
+   - [Fixed Bugs](#fixed-bugs)
+   - [Unfixed Bugs](#unfixed-bugs)
+7. [User stories Testing](#user-stories-testing)
 7. [Deployment](#deployment)
 8. [Credits](#credits)
 
@@ -28,10 +39,12 @@ An account page will let the users save their details, delivery address and view
 
 ***
 
+## ERD
+![ERD](images/ERD.png)
+
 ## Wireframes
 Below are the designs that I can use to build the site. I have used the user story numbers to link where I can meet the goal in my design. This will help me to think about the users needs as I build the page.
 
-### Home Page Design<br>
 User Story Number 1 -  <br>
 ![NAV BAR](images/nav-bar-wireframes.png)
 
@@ -155,7 +168,10 @@ User Story Number 3,7 -  <br>
 
 ### Features Left to Implement
 
-- 
+- I would like to have multiple images for each product, maybe from different angles, and the box they would come in, and have an option to view through them when on the product detail page
+- I would like to have the profile page have an option to save the name and card details, so the checkout page can be fully completed automatically if the user is logged in, and they just need to press BUY.
+- I would like the search feature to be more in depth and use faction and unit type as searchable criteria.
+- I would like to have the setting option for products be a foreign key also, so it doesn't need to be manually entered for each product
 
 
 ## Testing
@@ -163,7 +179,18 @@ User Story Number 3,7 -  <br>
 ### Manual Testing:
 [<< To TESTING.md](TESTING.md)
 
-This is a sample of shots of what the site looks like on different devices. 
+- I have tested that this page works in different web browsers by using chrome, safari and mozilla firefox on my computer and it is responsive on all platforms, looks consistent and no bugs with layouts or functions break.
+- I have tested that the project is responsive and works with different device sizes by using the 'inspect' tool and resizing to various different device sizes to make sure the lay outs remained functioning, readable and appealing. I also used my iPhone 16 on safari to check for any anomalies and i found the shipping threshold banner was looking a little goofy. so after adding a media query It looks good and functions as normal. 
+- I have tested all links, internal and external. I found I had missed a href for the mobile profile link, so the profile page wasn't working on mobile devices, after i fixed that They now all go to the correct destination and open in the correct way. 
+- I have tested that all text and fonts are readable and easy to understand, along with color choices. I used a contrast checker website [contrast checker](https://webaim.org/resources/contrastchecker/) to find viable colors and used the lighthouse feature in the inspect tool to check it all worked out. I have also used a clean common font so it is usable on all, new and old, devices.
+- I have asked my partner to use the website to see what a first time user would experience. She checked around the website to see how intuitive it was, how easy it was to understand and create an account, make a purchase and that it all worked well from a new pair of eyes.
+
+[<< To TESTING.md](TESTING.md)
+
+### Responsiveness
+
+This is a sample of shots of what the site looks like on different devices.
+ 
 
 #### Desktop
 |Firefox 128.0.2| Chrome 127.0.6533.72/73 / 23 July 2024|
@@ -192,7 +219,7 @@ This is a sample of shots of what the site looks like on different devices.
 
 #### Mobile
 
-##### Safari iOS Phone 17.5
+###### Safari iOS Phone 17.5
 | iPhone home page |
 ![iPhone home page](images/mobile-home-live.PNG)
 
@@ -218,20 +245,21 @@ This is a sample of shots of what the site looks like on different devices.
 
 | iPhone cart page |
 ![iPhone cart page](images/mobile-cart-live-2.jpg)
+
 ### Validator Testing
 - HTML
-    - home.html: No errors were returned when passing through the official W3C validator ![home validation](images/validator-home.png) |<br> 
-    - add_product.html: No errors were returned when passing through the official W3C validator ![add_product validation](images/validator-add-product.png) |<br> 
-    - edit_product.html: No errors were returned when passing through the official W3C validator ![edit_product validation](images/validator-edit-product.png) |<br> 
-    - products.html: No errors were returned when passing through the official W3C validator ![products validation](images/validator-products.png) |<br> 
-    - product_page.html: No errors were returned when passing through the official W3C validator ![product_page validation](images/validator-product-page.png) |<br>
-    - shopping_cart.html: No errors were returned when passing through the official W3C validator ![shopping_cart validation](images/validator-cart.png) |<br> 
-    - checkout.html: No errors were returned when passing through the official W3C validator ![checkout validation](images/validator-checkout.png) |<br> 
-    - checkout_success.html: No errors were returned when passing through the official W3C validator ![checkout_success validation](images/validator-checkout-success.png) |<br> 
-    - login.html: No errors were returned when passing through the official W3C validator ![login validation](images/validator-login.png) |<br> 
-    - signup.html: No errors were returned when passing through the official W3C validator ![signup validation](images/validator-signup.png) |<br> 
-    - profile.html: No errors were returned when passing through the official W3C validator ![profile validation](images/validator-profile-page.png) |<br> 
-    - order_history.html: No errors were returned when passing through the official W3C validator ![order_history validation](images/validator-profile-order-history.png) |<br>
+    - home.html: No errors were returned when passing through the official W3C validator [Home validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2F) |<br> 
+    - add_product.html: No errors were returned when passing through the official W3C validator [Add product validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fproducts%2Fadd%2F#l261c60) |<br> 
+    - edit_product.html: No errors were returned when passing through the official W3C validator [Edit product validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fproducts%2Fedit%2F2#l261c60) |<br> 
+    - products.html: No errors were returned when passing through the official W3C validator [Products validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fproducts%2F) |<br> 
+    - product_page.html: No errors were returned when passing through the official W3C validator [Product details validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fproducts%2F2%2F) |<br>
+    - shopping_cart.html: No errors were returned when passing through the official W3C validator [Shopping_cart validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fbag%2F#l261c60) |<br> 
+    - checkout.html: No errors were returned when passing through the official W3C validator [Checkout validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fcheckout%2F#l261c60) |<br> 
+    - checkout_success.html: No errors were returned when passing through the official W3C validator [Checkout success validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fcheckout%2Fcheckout_success%2F3389E43C1483459AA829FD7EB30D9317#l261c60) |<br> 
+    - login.html: No errors were returned when passing through the official W3C validator [Login validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Faccounts%2Flogin%2F) |<br> 
+    - signup.html: No errors were returned when passing through the official W3C validator [Signup validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Faccounts%2Fsignup%2F) |<br> 
+    - profile.html: No errors were returned when passing through the official W3C validator [Profile validation](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fmackays-miniatures-sam-m-29767862f4e8.herokuapp.com%2Fprofile%2F#l261c60) |<br> 
+    - order_history.html: No errors were returned when passing through the official W3C validator [Order history validation](images/validator-profile-order-history.png) |<br>
 
 - CSS 
     - base.css: No errors were returned when passing through official Jigsaw validator ![base css](images/base-css-validator.png)|<br> 
@@ -293,34 +321,27 @@ This is a sample of shots of what the site looks like on different devices.
         - urls.py:  No errors were returned when passing through CI Python Linter ![](images/lint-project-urls.png)<br>
                
 
-- Lighthouse
+### Lighthouse
+ To check the colors and fonts, I used Lighthouse in the Google devtools. The results are shown below:
 
-  ### NOTE:
-    - The light house is taking a score hit in best practices for cookie usage in a 3rd party programme that i do not have control over, as is the performance because of all the high quality images that are stored in AWS.
-    - I have have done all the improvements with in my power to get the scores has high as possible
-    - some of the crispy forms used (I.E. For the country selector) do not come with a built in label, which is tanking the accessability on some pages. and i cannot fix this issue
+
+    Note: The light house is taking a score hit in best practices for cookie usage in a 3rd party programme that i do not have control over, as is the performance because of all the high quality images that are stored in AWS. I have have done all the improvements with in my power to get the scores has high as possible.
     
-    - home.html: No errors were returned when passing through the Lighthouse validator ![home lighthouse](images/lighthouse-home.png)|<br> 
-    - add_product.html: No errors were returned when passing through the Lighthouse validator ![add_product lighthouse](images/lighthouse-add-products.png)|<br> 
-    - edit_product.html: No errors were returned when passing through the Lighthouse validator ![edit_product lighthouse](images/lighthouse-edit-product.png)|<br> 
-    - product_page.html: No errors were returned when passing through the Lighthouse validator ![product_page lighthouse](images/lighthouse-product-page.png)|<br>
-    - products.html: No errors were returned when passing through the Lighthouse validator ![products lighthouse](images/lighthouse-products.png)|<br> 
-    - shopping_cart.html: No errors were returned when passing through the Lighthouse validator ![shopping_cart lighthouse](images/lighthouse-shopping-cart.png)|<br> 
-    - checkout.html: No errors were returned when passing through the Lighthouse validator ![checkout lighthouse](images/lighthouse-checkout.png)|<br> 
-    - checkout_success.html: No errors were returned when passing through the Lighthouse validator ![checkout_success lighthouse](images/lighthouse-checkout-success.png)|<br> 
-    - login.html: No errors were returned when passing through the Lighthouse validator ![login lighthouse](images/lighthouse-login.png)|<br> 
-    - signup.html: No errors were returned when passing through the Lighthouse validator ![signup lighthouse](images/lighthouse-signup.png)|<br> 
-    - profile.html: No errors were returned when passing through the Lighthouse validator ![profile lighthouse](images/lighthouse-profile.png)|<br> 
-    - order_history.html: No errors were returned when passing through the Lighthouse validator ![order_history lighthouse](images/lighthouse-order-history.png)|<br>
+#### home.html: No errors were returned when passing through the Lighthouse validator ![home lighthouse](images/lighthouse-home.png)|<br> 
+#### add_product.html: No errors were returned when passing through the Lighthouse validator ![add_product lighthouse](images/lighthouse-add-products.png)|<br> 
+#### edit_product.html: No errors were returned when passing through the Lighthouse validator ![edit_product lighthouse](images/lighthouse-edit-product.png)|<br> 
+#### product_page.html: No errors were returned when passing through the Lighthouse validator ![product_page lighthouse](images/lighthouse-product-page.png)|<br>
+#### products.html: No errors were returned when passing through the Lighthouse validator ![products lighthouse](images/lighthouse-products.png)|<br> 
+#### shopping_cart.html: No errors were returned when passing through the Lighthouse validator ![shopping_cart lighthouse](images/lighthouse-shopping-cart.png)|<br> 
+#### checkout.html: No errors were returned when passing through the Lighthouse validator ![checkout lighthouse](images/lighthouse-checkout.png)|<br> 
+#### checkout_success.html: No errors were returned when passing through the Lighthouse validator ![checkout_success lighthouse](images/lighthouse-checkout-success.png)|<br> 
+#### login.html: No errors were returned when passing through the Lighthouse validator ![login lighthouse](images/lighthouse-login.png)|<br> 
+#### signup.html: No errors were returned when passing through the Lighthouse validator ![signup lighthouse](images/lighthouse-signup.png)|<br> 
+#### profile.html: No errors were returned when passing through the Lighthouse validator ![profile lighthouse](images/lighthouse-profile.png)|<br> 
+#### order_history.html: No errors were returned when passing through the Lighthouse validator ![order_history lighthouse](images/lighthouse-order-history.png)|<br>
 
-### Manual Testing
-- I have tested that this page works in different web browsers by using chrome, safari and mozilla firefox on my computer and it is responsive on all platforms, looks consistent and no bugs with layouts or functions break.
-- I have tested that the project is responsive and works with different device sizes by using the 'inspect' tool and resizing to various different device sizes to make sure the lay outs remained functioning, readable and appealing. I also used my iPhone 16 on safari to check for any anomalies and i found the shipping threshold banner was looking a little goofy. so after adding a media query It looks good and functions as normal. 
-- I have tested all links, internal and external. I found I had missed a href for the mobile profile link, so the profile page wasn't working on mobile devices, after i fixed that They now all go to the correct destination and open in the correct way. 
-- I have tested that all text and fonts are readable and easy to understand, along with color choices. I used a contrast checker website [contrast checker](https://webaim.org/resources/contrastchecker/) to find viable colors and used the lighthouse feature in the inspect tool to check it all worked out. I have also used a clean common font so it is usable on all, new and old, devices.
-- I have asked my partner to use the website to see what a first time user would experience. She checked around the website to see how intuitive it was, how easy it was to understand and create an account, make a purchase and that it all worked well from a new pair of eyes.
-
-### Bugs
+## Bugs
+### Fixed Bugs
 #### Bug 1
 - link to profile page was not working on mobile, had not added the link to both desktop and mobile navbars
 
@@ -529,7 +550,7 @@ New code:
 
 
 
-### User stories Testing
+## User stories Testing
 |Story No.|Result|Story/ Evidence|
 | ------------- | ------------- | ------------- |
 |1|<font color="green">Test Pass</font> | <br> As The Site Owner, <br> I want to be users to be able to find what they are looking for with ease <br> So they will be more likely to buy from me <br><br> I know I am done when I have an easy to use NavBar and an effective search engine that allows you to filter out specific items, a gallery style product page and a sorting system. <br><br> Evidence: I have a universal and consistent nav bar on all pages, with a clean and simple design, a search engine that allows for targeted searches through the database and a sleek layout for all product pages to include images, pricing and the ability to add items to cart with 1 button click. <br> ![layout for navbar and gallery](images/evidence-story-1.png)|
@@ -541,9 +562,6 @@ New code:
 |7|<font color="green">Test Pass</font> | <br> As A buyer , <br> I want to be able to see my invoice information and have it emailed to me for confirmation <br> So I Know my purchase has worked and I have evidence of the products I should receive <br><br> I know I am done when I have set up an automatic email that will fill in with the buyers information and any contact information for them to be able to contact the owner. <br> Evidence: I have an automated system that will send and invoice receipt to the users valid email address (which is a mandatory field) and will autofill if you are logged in. There is also a receipt displayed onscreen directly on the website if the email is lost, or the address was incorrect/not active. <br><br> ![on website receipt](images/evidence-reciept-story-7.png) ![success toast](images/evidence-alert-story-7.png) ![email](images/evidence-email-story-7.png)|
 |8|<font color="green">Test Pass</font> | <br> As A Site user, <br> I want to be able to add new products, edit old products, have only admins be able to do it <br> So I can add new models when they are announced and released, and edit old ones if the information changes <br><br> I know I am done when I have a simple front end page that allows ONLY admin/superusers to make changes, remove and add models and images to the website. <br> Evidence: i have both a backend and frontend editing capabilities that are tied to admin status, which can only be activated in the back end, so regular customers can not edit or modify other users, product information or prices or weather they have admin or staff power. <br><br> ![edit/delete buttons](images/evidence-addordelete-story-8.png) ![add/edit frontend](images/evidence-CRUD-story-8.png) ![add/edit backend](images/evidence-backend-story-8.png) ![admin/staff status backend](images/evidence-admin-story-8.png) |
 
-### Accessibility Testing
-
-To check the colors and fonts, I used Lighthouse in the Google devtools. The results are shown below:
 
 ## Deployment
 
@@ -581,6 +599,44 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
  9. Click on Deploy.
  10. The page will then provide the url to the python terminal.
 
+### Database
+A Postgres database has been used for this project, provided by PostGreSQL, using the link provided by Code Institute.
+
+1. Open your web browser and go to the [PostGreSQL](https://dbs.ci-dbs.net/) website.
+2. Enter in your student email address, then click submit.
+3. Once your email is verified, A link will be sent to your email address.
+4. Put the URL in your DATABASE_URL config var, I used Heroku to deploy and config vars are found under settings in you app dashboard.
+5. In your workspace terminal run the following commands:
+    -  pip3 install dj_database_url==0.5.0 psycopg2
+    -  pip freeze > requirements.txt
+
+6. In your project level settings.py, put "import dj_database_url".
+7. In that same settings.py, put:
+ - 
+ ```
+  " DATABASES = {
+    'default': dj_database_url.parse('your-database-url-here')
+    }"
+    *NOTE*: DO NOT COMMIT AND PUSH THIS CHANGE, UNTIL YOU HAVE HIDDEN YOUR URL IN AN ENV.
+``` 
+    
+
+8. Put the following command in the workspace terminal:
+    - python3 manage.py migrate
+
+1. Create a new superuser for the database, and follow the onscreen prompts:
+    - python3 manage.py createsuperuser
+10. Change your settings.py DATABASEs section to the following:
+    -  DATABASES = {
+```
+'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     }
+}
+```
+11. You can now git add, commit and push these changes.
+
  The live link can be found here - [mackays-miniatures-sam-m](https://mackays-miniatures-sam-m-29767862f4e8.herokuapp.com/)
 
 ## Credits
@@ -596,3 +652,8 @@ To check the colors and fonts, I used Lighthouse in the Google devtools. The res
 #### Icons
 - All page Icons - [Font Awesome](https://fontawesome.com/)
 - home page image - [Warhammer Artwork](https://www.goodfon.com/games/wallpaper-download-1920x1120-dark-imperium-warhammer-40-000-box-cover.html)
+
+
+#### Special thanks
+- My mentor, Daniel Hamilton, for his invaluable advice and time to help get this project made.
+- The CI project student support for the late night questions, and help getting broken things working.
