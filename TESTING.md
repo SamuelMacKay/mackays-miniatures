@@ -26,8 +26,8 @@
 | --- | --- | --- | --- |
 |1| Sort by drop down reorganizes product display order based on option clicked |Pass| each option works when clicked and reforms the products
 ![Sorting](images/testing-sorting.png)|
-|2| Product layout displays 1,2,3 or 4 in a row on small, medium, large and xlarge |Pass| layout resizes responsively when on mobile, tablet or desktop 
-![xlarge](images/testing-products-xl.png)<br>
+|2| Product layout displays 1,2,3 or 4 in a row on small, medium, large and x-large |Pass| layout resizes responsively when on mobile, tablet or desktop 
+![x-large](images/testing-products-xl.png)<br>
 ![large](images/testing-products-l.png)<br>
 ![medium](images/testing-products-m.png)<br>
 ![small](images/testing-products-s.png) |
@@ -40,7 +40,7 @@
 |6| a fixed button on the bottom right corner links back to top for mobile UX |Pass| Links were checked by clicking on them
 ![back to top](images/testing-btt.png) |
 |7| PreOrder and New notifications on products are links to all pre order or new products |Pass| Links were checked by clicking on them
-![preorder link](images/testing-preorder.png) |
+![pre order link](images/testing-preorder.png) |
 |1| The product faction is a link to filter out just that faction |Pass| Links were checked by clicking on them |
 
 

@@ -164,7 +164,7 @@
 {% block postloadjs %}
 {% include 'products/includes/quantity_input_script.html' %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
