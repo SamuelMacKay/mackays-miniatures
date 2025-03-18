@@ -464,3 +464,13 @@ input[name='q']::placeholder P{
         padding: .5rem .5rem !important;
     }
 }
+
+@media (min-width: 992px) and (max-width: 1259px) {
+    #shipping-threshold {
+        font-size: 1.3rem;
+    }
+    .logo-font {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+}
