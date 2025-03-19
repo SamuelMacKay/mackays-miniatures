@@ -249,7 +249,7 @@ input[name='q']::placeholder P{
 }
 
 .allauth-form-inner-content a {
-	color: darkgreen;
+	color: #11B01C;
 }
 
 /* Product Form */
