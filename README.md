@@ -325,7 +325,7 @@ This is a sample of shots of what the site looks like on different devices.
  To check the colors and fonts, I used Lighthouse in the Google devtools. The results are shown below:
 
 
-    Note: The light house is taking a score hit in best practices for cookie usage in a 3rd party programme that i do not have control over, as is the performance because of all the high quality images that are stored in AWS. I have have done all the improvements with in my power to get the scores has high as possible.
+    Note: The light house is taking a score hit in best practices for cookie usage in a 3rd party programme that i do not have control over, as is the performance because of all the high quality images that are stored in a 3rd party database, AWS. I have have done all the improvements with in my power to get the scores has high as possible.
     
 #### home.html: No errors were returned when passing through the Lighthouse validator ![home lighthouse](images/lighthouse-home.png)|<br> 
 #### add_product.html: No errors were returned when passing through the Lighthouse validator ![add_product lighthouse](images/lighthouse-add-products.png)|<br> 
@@ -546,7 +546,7 @@ New code:
 ```
 
 ### Unfixed Bugs
- - Lighthouse performance and best practices have scored poorly from 3rd party programs that are required for the website to function, stripe uses cookies which i can not control but are considered bad practice and out of date now,
+ - Lighthouse performance and best practices have scored poorly from 3rd party programs that are required for the website to function, stripe uses cookies which i can not control but are considered bad practice and out of date now.
 
 
 
@@ -602,7 +602,7 @@ New code:
 ### Database
 A Postgres database has been used for this project, provided by PostGreSQL, using the link provided by Code Institute.
 
-1. Open your web browser and go to the [PostGreSQL](https://dbs.ci-dbs.net/) website.
+1. Open your web browser and go to the [CI PostGreSQL Link](https://dbs.ci-dbs.net/).
 2. Enter in your student email address, then click submit.
 3. Once your email is verified, A link will be sent to your email address.
 4. Put the URL in your DATABASE_URL config var, I used Heroku to deploy and config vars are found under settings in you app dashboard.

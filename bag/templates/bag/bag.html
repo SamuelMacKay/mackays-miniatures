@@ -101,9 +101,9 @@
                         {% endfor %}
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Cart Total: £{{ total|floatformat:2 }}</strong></h6>
-                                <h6 {% if free_delivery_delta == 0 %}class="text-darkgreen"{% endif %}>Delivery:£{{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4 text-darkgreen"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                                <span><strong>Cart Total: £{{ total|floatformat:2 }}</strong></span>
+                                <span {% if free_delivery_delta == 0 %}class="text-darkgreen"{% endif %}>Delivery:£{{ delivery|floatformat:2 }}</span>
+                                <span class="mt-4 text-darkgreen"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></span>
                                 {% if free_delivery_delta > 0 %}
                                         <p class="mb-0 text-black font-size-medium p-0 btn bg-warning rounded-1 shadow-sm text-center">
                                             Add just <strong>£{{ free_delivery_delta }}</strong> for free delivery!

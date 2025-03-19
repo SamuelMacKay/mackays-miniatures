@@ -32,6 +32,7 @@ DEBUG = os.environ.get("DEVELOPMENT")
 ALLOWED_HOSTS = [
     'mackays-miniatures-sam-m-29767862f4e8.herokuapp.com',
     '8000-samuelmacka-mackaysmini-od5sa4qu8rf.ws.codeinstitute-ide.net',
+    '*',
     ]
 
 
