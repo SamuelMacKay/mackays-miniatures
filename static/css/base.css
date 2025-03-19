@@ -250,6 +250,9 @@ input[name='q']::placeholder P{
 
 .allauth-form-inner-content a {
 	color: darkgreen;
+}
+
+.link-underline {
     border-bottom: solid;
 }
 
