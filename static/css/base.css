@@ -474,3 +474,7 @@ input[name='q']::placeholder P{
         font-size: 1.3rem;
     }
 }
+
+.cart-name-size {
+    font-size: large;
+}
