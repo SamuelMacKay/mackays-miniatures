@@ -37,4 +37,3 @@ class UserProfileForm(forms.ModelForm):
             self.fields[field].widget.attrs['class'] = (
                 'border-black rounded-1 profile-form-input'
             )
-            self.fields[field].label = 'Country input dropdown'
